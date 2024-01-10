@@ -25,7 +25,6 @@ i18n.use(initReactI18next).init({
   debug: import.meta.env.DEV,
   ns: [defaultNS],
   defaultNS,
-  keySeparator: false,
   interpolation: {
     escapeValue: false,
     formatSeparator: ',',

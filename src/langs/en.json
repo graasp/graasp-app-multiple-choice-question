@@ -1,5 +1,22 @@
 {
   "translations": {
-    "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit"
+    "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit",
+    "Answers": "Answers",
+    "ANSWERS": {
+      "TITLE": "Answers"
+    },
+    "SETTINGS": {
+      "TITLE": "Settings",
+      "SAVE_BTN": "Save",
+      "QUESTION": {
+        "TITLE": "Question"
+      },
+      "ANSWERS": {
+        "TITLE": "Answers"
+      },
+      "GENERAL": {
+        "TITLE": "General"
+      }
+    }
   }
 }

@@ -1,18 +1,42 @@
 import { FC, ReactElement, createContext, useContext } from 'react';
 
+import {
+  AnswersSettings,
+  GeneralSettings,
+  QuestionSettings,
+} from '@/config/appSettings';
+
 import { hooks, mutations } from '../../config/queryClient';
 import Loader from '../common/Loader';
 
 // mapping between Setting names and their data type
 // eslint-disable-next-line @typescript-eslint/ban-types
-type AllSettingsType = {};
+type AllSettingsType = {
+  question: QuestionSettings;
+  answers: AnswersSettings;
+  general: GeneralSettings;
+};
 
 // default values for the data property of settings by name
-const defaultSettingsValues: AllSettingsType = {};
+const defaultSettingsValues: AllSettingsType = {
+  question: {
+    label: '',
+  },
+  answers: {
+    answers: [],
+  },
+  general: {
+    multipleAnswers: false,
+    required: false,
+  },
+};
 
 // list of the settings names
 const ALL_SETTING_NAMES = [
   // name of your settings
+  'question',
+  'answers',
+  'general',
 ] as const;
 
 // automatically generated types
@@ -75,14 +99,17 @@ export const SettingsProvider: FC<Prop> = ({ children }) => {
     if (isSuccess) {
       const allSettings: AllSettingsType = ALL_SETTING_NAMES.reduce(
         <T extends AllSettingsNameType>(acc: AllSettingsType, key: T) => {
-          // todo: types are not inferred correctly here
-          // @ts-ignore
           const setting = appSettingsList.find((s) => s.name === key);
-          const settingData = setting?.data;
-          acc[key] = settingData as AllSettingsType[T];
+          if (setting) {
+            const settingData =
+              setting?.data as unknown as AllSettingsType[typeof key];
+            acc[key] = settingData;
+          } else {
+            acc[key] = defaultSettingsValues[key];
+          }
           return acc;
         },
-        {},
+        defaultSettingsValues,
       );
       return {
         ...allSettings,

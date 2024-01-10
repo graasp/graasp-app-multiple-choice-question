@@ -5,13 +5,25 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 import { CssBaseline, ThemeProvider, createTheme, styled } from '@mui/material';
 import { grey, orange, pink } from '@mui/material/colors';
-import { StyledEngineProvider } from '@mui/material/styles';
+import {
+  StyledEngineProvider,
+  responsiveFontSizes,
+} from '@mui/material/styles';
 
 import {
   GraaspContextDevTool,
   WithLocalContext,
   WithTokenContext,
 } from '@graasp/apps-query-client';
+
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fontsource/roboto/300.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fontsource/roboto/400.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fontsource/roboto/500.css';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import '@fontsource/roboto/700.css';
 
 import i18nConfig from '@/config/i18n';
 import {
@@ -46,24 +58,51 @@ declare module '@mui/material/styles' {
   }
 }
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#5050d2',
+const theme = responsiveFontSizes(
+  createTheme({
+    palette: {
+      primary: {
+        main: '#5050d2',
+      },
+      secondary: pink,
+      default: grey['500'],
+      background: {
+        paper: '#fff',
+      },
     },
-    secondary: pink,
-    default: grey['500'],
-    background: {
-      paper: '#fff',
+    status: {
+      danger: {
+        background: orange['400'],
+        color: '#fff',
+      },
     },
-  },
-  status: {
-    danger: {
-      background: orange['400'],
-      color: '#fff',
+    components: {
+      MuiTypography: {
+        defaultProps: {
+          variantMapping: {
+            h1: 'h2',
+            h2: 'h3',
+            h3: 'h4',
+            h4: 'h5',
+            h5: 'h6',
+            h6: 'h6',
+            subtitle1: 'h3',
+            subtitle2: 'h3',
+          },
+        },
+      },
     },
-  },
-});
+    typography: {
+      h1: {
+        fontSize: '2rem',
+        textDecorationLine: 'underline',
+      },
+      h2: {
+        fontSize: '1.8rem',
+      },
+    },
+  }),
+);
 
 const RootDiv = styled('div')({
   flexGrow: 1,
