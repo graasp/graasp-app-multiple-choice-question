@@ -3511,6 +3511,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash.isequal@npm:^4":
+  version: 4.5.8
+  resolution: "@types/lodash.isequal@npm:4.5.8"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: f3180c2d2925514fff1908a1303c11468c9f39b47fd7b053416aad3f1447f8e4a9894dd0460187ac9ac19387e25aec8dd8214d13a50a0967e0dc9cca8e4c5353
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.14.202
+  resolution: "@types/lodash@npm:4.14.202"
+  checksum: 1bb9760a5b1dda120132c4b987330d67979c95dbc22612678682cd61b00302e190f4207228f3728580059cdab5582362262e3819aea59960c1017bd2b9fb26f6
+  languageName: node
+  linkType: hard
+
 "@types/minimist@npm:^1.2.0":
   version: 1.2.3
   resolution: "@types/minimist@npm:1.2.3"
@@ -7073,6 +7089,7 @@ __metadata:
     "@tanstack/react-query-devtools": "npm:^4.36.1"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
     "@types/i18n": "npm:0.13.10"
+    "@types/lodash.isequal": "npm:^4"
     "@types/node": "npm:20.10.8"
     "@types/react": "npm:18.2.47"
     "@types/react-dom": "npm:18.2.18"
@@ -7098,6 +7115,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:4.6.0"
     husky: "npm:8.0.3"
     i18next: "npm:23.7.16"
+    lodash.isequal: "npm:^4.5.0"
     miragejs: "npm:^0.1.48"
     nock: "npm:^13.4.0"
     nyc: "npm:15.1.0"
@@ -8365,6 +8383,13 @@ __metadata:
   version: 4.4.0
   resolution: "lodash.flattendeep@npm:4.4.0"
   checksum: 0d0b41d8d86999e8bea94905ac65347404d427aacddbc6654dc2f85905e27cd2b708139671ecea135fa6f0a17ed94b9d4cab8ce12b08eddcbb1ddd83952ee4c2
+  languageName: node
+  linkType: hard
+
+"lodash.isequal@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "lodash.isequal@npm:4.5.0"
+  checksum: 82fc58a83a1555f8df34ca9a2cd300995ff94018ac12cc47c349655f0ae1d4d92ba346db4c19bbfc90510764e0c00ddcc985a358bdcd4b3b965abf8f2a48a214
   languageName: node
   linkType: hard
 

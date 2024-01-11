@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -13,7 +14,7 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 
 import { AnswersSettings } from '@/config/appSettings';
-import { Answer, getEmptyAnswer } from '@/interfaces/answers';
+import { Answer, AnswerKey, getNewAnswer } from '@/interfaces/answers';
 
 import AnswerInput from './AnswerInput';
 
@@ -21,45 +22,96 @@ const AnswersSettingsEdit: FC<{
   answers: AnswersSettings;
   onChange: (newSetting: AnswersSettings) => void;
 }> = ({ answers, onChange }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('translations', {
+    keyPrefix: 'SETTINGS.ANSWERS',
+  });
+
+  const { defaultAnswer, multipleAnswers } = answers;
+
+  const isDefault = (
+    key: AnswerKey,
+    defaultAns: AnswerKey[] | undefined,
+  ): boolean => defaultAns?.includes(key) ?? false;
+
   const addNewAnswer = (): void => {
-    onChange({ answers: [...answers.answers, getEmptyAnswer()] });
+    onChange({
+      ...answers,
+      answers: [
+        ...answers.answers,
+        getNewAnswer({ key: answers.answers.length.toString() }),
+      ],
+    });
   };
+
+  const handleAnswersChange = (a: Answer[]): void => {
+    onChange({ ...answers, answers: a });
+  };
+
+  const handleSelectDefault = (key: AnswerKey, add: boolean): void => {
+    // eslint-disable-next-line no-console, @typescript-eslint/no-unused-expressions
+    add ? console.log('Add: ', key) : console.log('Remove: ', key);
+    let newDef = [...defaultAnswer];
+    if (add) {
+      if (!multipleAnswers) {
+        newDef = [];
+      }
+      newDef.push(key);
+    } else {
+      newDef = defaultAnswer.filter((a) => a !== key);
+    }
+    onChange({
+      ...answers,
+      defaultAnswer: newDef,
+    });
+  };
+
   return (
     <>
-      <Typography variant="h2">{t('SETTINGS.ANSWERS.TITLE')}</Typography>
+      <Typography variant="h2">{t('TITLE')}</Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="answers table">
           <TableHead>
             <TableRow>
-              <TableCell align="right">Default answer</TableCell>
-              <TableCell>Key</TableCell>
-              <TableCell>Value</TableCell>
-              <TableCell>Answer</TableCell>
+              <TableCell align="right">
+                {t('DEFAULT_ANSWER_TABLE_HEAD')}
+              </TableCell>
+              <TableCell>{t('INPUT.KEY_LABEL')}</TableCell>
+              <TableCell>{t('INPUT.ANSWER_LABEL')}</TableCell>
+              <TableCell />
             </TableRow>
           </TableHead>
           <TableBody>
-            {answers.answers.map((answer) => (
+            {answers.answers.map((answer, index) => (
               <AnswerInput
                 answer={answer}
-                key={answer.key}
-                setValueToggle={false}
+                index={index}
+                key={index}
                 isKeyUnique
-                // eslint-disable-next-line react/jsx-no-bind, @typescript-eslint/no-shadow
-                onChange={function (answer: Answer): void {
-                  throw new Error('Function not implemented.');
+                onChange={(ans) => {
+                  if (isDefault(answer.key, defaultAnswer)) {
+                    handleSelectDefault(ans.key, true);
+                  }
+                  const a = [...answers.answers];
+                  a[index] = ans;
+                  handleAnswersChange(a);
                 }}
-                // eslint-disable-next-line react/jsx-no-bind
-                onSelectDefault={function (key: string): void {
-                  throw new Error('Function not implemented.');
+                // eslint-disable-next-line react/jsx-no-bind, no-console
+                onSelectDefault={(d) => handleSelectDefault(answer.key, d)}
+                onDelete={(i) => {
+                  const a = [...answers.answers];
+                  a.splice(i, 1);
+                  handleAnswersChange(a);
                 }}
+                selectDefault={isDefault(answer.key, defaultAnswer)}
               />
             ))}
           </TableBody>
           <TableFooter>
             <TableRow>
               <TableCell>
-                <Button onClick={addNewAnswer}>New answer</Button>
+                <Button startIcon={<AddIcon />} onClick={addNewAnswer}>
+                  {t('NEW_ANSWER_BTN')}
+                </Button>
               </TableCell>
             </TableRow>
           </TableFooter>

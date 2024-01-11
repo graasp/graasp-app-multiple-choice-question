@@ -6,10 +6,10 @@ export type QuestionSettings = {
 
 export type AnswersSettings = {
   answers: Array<Answer>;
+  defaultAnswer: AnswerKey[];
+  multipleAnswers: boolean;
 };
 
 export type GeneralSettings = {
-  defaultAnswer?: AnswerKey;
-  multipleAnswers: boolean;
   required: boolean;
 };

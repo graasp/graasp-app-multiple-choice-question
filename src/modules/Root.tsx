@@ -16,6 +16,7 @@ import {
   WithTokenContext,
 } from '@graasp/apps-query-client';
 
+// TODO: Check if it's useful.
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@fontsource/roboto/300.css';
 // eslint-disable-next-line import/no-extraneous-dependencies

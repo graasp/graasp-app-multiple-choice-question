@@ -12,7 +12,16 @@
         "TITLE": "Question"
       },
       "ANSWERS": {
-        "TITLE": "Answers"
+        "TITLE": "Answers",
+        "NEW_ANSWER_BTN": "Add a new answer",
+        "DEFAULT_ANSWER_TABLE_HEAD": "Default answer",
+        "INPUT": {
+          "KEY_HELP_WARNING": "Please, provide a key.",
+          "KEY_HELP_ERROR": "Please, make sure each key is unique.",
+          "KEY_LABEL": "Key",
+          "VALUE_LABEL": "Value",
+          "ANSWER_LABEL": "Answer"
+        }
       },
       "GENERAL": {
         "TITLE": "General"
