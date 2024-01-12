@@ -24,7 +24,7 @@ enum Tabs {
 
 const AdminView = (): JSX.Element => {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState(Tabs.TABLE_VIEW);
+  const [activeTab, setActiveTab] = useState(Tabs.SETTINGS_VIEW);
 
   return (
     <Box data-cy={BUILDER_VIEW_CY}>
