@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import isEqual from 'lodash.isequal';
 
 import { AnswersSettings, QuestionSettings } from '@/config/appSettings';
+import { SETTINGS_SAVE_BTN_CY, SETTINGS_VIEW_CY } from '@/config/selectors';
 
 import { useSettings } from '../context/SettingsContext';
 import AnswersSettingsEdit from './AnswersSettings';
@@ -60,7 +61,7 @@ const SettingsView: FC = () => {
   }, [answers, answersSavedState, question, questionSavedState]);
 
   return (
-    <Stack spacing={2}>
+    <Stack data-cy={SETTINGS_VIEW_CY} spacing={2}>
       <Typography variant="h1">{t('SETTINGS.TITLE')}</Typography>
       <QuestionSettingsEdit
         question={question}
@@ -82,6 +83,7 @@ const SettingsView: FC = () => {
           variant="contained"
           onClick={saveAllSettings}
           disabled={disableSave}
+          data-cy={SETTINGS_SAVE_BTN_CY}
         >
           {t('SETTINGS.SAVE_BTN')}
         </Button>

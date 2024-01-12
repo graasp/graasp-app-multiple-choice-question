@@ -7,7 +7,7 @@ import { TabContext, TabList, TabPanel } from '@mui/lab';
 import { Box, Tab } from '@mui/material';
 
 import {
-  BUILDER_VIEW_CY,
+  ADMIN_VIEW_CY,
   SETTINGS_VIEW_PANE_CY,
   TABLE_VIEW_PANE_CY,
   TAB_SETTINGS_VIEW_CY,
@@ -27,7 +27,7 @@ const AdminView = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState(Tabs.SETTINGS_VIEW);
 
   return (
-    <Box data-cy={BUILDER_VIEW_CY}>
+    <Box data-cy={ADMIN_VIEW_CY}>
       <TabContext value={activeTab}>
         <TabList
           textColor="secondary"

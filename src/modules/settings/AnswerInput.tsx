@@ -9,6 +9,10 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TextField from '@mui/material/TextField';
 
+import {
+  makeSettingsAnswersInputKeyCy,
+  makeSettingsAnswersRowCy,
+} from '@/config/selectors';
 import { Answer } from '@/interfaces/answers';
 
 const AnswerInput: FC<{
@@ -64,7 +68,7 @@ const AnswerInput: FC<{
   }, [keyTextFieldColor, t]);
   const isKeyValid = useMemo(() => key?.length > 0, [key]);
   return (
-    <TableRow>
+    <TableRow data-cy={makeSettingsAnswersRowCy(index)}>
       <TableCell align="right" padding="checkbox">
         {multiDefaults ? (
           <Checkbox
@@ -86,6 +90,9 @@ const AnswerInput: FC<{
       </TableCell>
       <TableCell>
         <TextField
+          inputProps={{
+            'data-cy': makeSettingsAnswersInputKeyCy(index),
+          }}
           value={key}
           color={keyTextFieldColor}
           onChange={onKeyChange}
