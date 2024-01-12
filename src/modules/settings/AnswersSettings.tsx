@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -66,7 +67,7 @@ const AnswersSettingsEdit: FC<{
   };
 
   return (
-    <>
+    <Stack spacing={1}>
       <Typography variant="h2">{t('TITLE')}</Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="answers table">
@@ -108,7 +109,7 @@ const AnswersSettingsEdit: FC<{
           </TableBody>
           <TableFooter>
             <TableRow>
-              <TableCell>
+              <TableCell colSpan={3}>
                 <Button startIcon={<AddIcon />} onClick={addNewAnswer}>
                   {t('NEW_ANSWER_BTN')}
                 </Button>
@@ -117,7 +118,7 @@ const AnswersSettingsEdit: FC<{
           </TableFooter>
         </Table>
       </TableContainer>
-    </>
+    </Stack>
   );
 };
 

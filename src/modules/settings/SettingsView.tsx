@@ -60,7 +60,7 @@ const SettingsView: FC = () => {
   }, [answers, answersSavedState, question, questionSavedState]);
 
   return (
-    <Stack spacing={1}>
+    <Stack spacing={2}>
       <Typography variant="h1">{t('SETTINGS.TITLE')}</Typography>
       <QuestionSettingsEdit
         question={question}

@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import { useLocalContext } from '@graasp/apps-query-client';
+import { PermissionLevel, PermissionLevelCompare } from '@graasp/sdk';
 
 import {
   AppDataType,
@@ -10,23 +11,34 @@ import {
 import { hooks, mutations } from '@/config/queryClient';
 import { UserAnswer } from '@/interfaces/userAnswer';
 
-const useUserAnswer = (): {
+const useUserAnswers = (): {
   userAnswer?: UserAnswer;
   submitAnswer: (userAnswer: UserAnswer) => void;
+  allAnswersAppData?: UserAnswerAppData[];
 } => {
   const { data, isSuccess } = hooks.useAppData();
   const [userAnswerAppData, setUserAnswerData] = useState<UserAnswerAppData>();
+  const [allAnswersAppData, setAllAnswersAppData] =
+    useState<UserAnswerAppData[]>();
   const { mutate: postAppData } = mutations.usePostAppData();
   const { mutate: patchAppData } = mutations.usePatchAppData();
+  const { permission } = useLocalContext();
+
+  const isAdmin = useMemo(
+    () => PermissionLevelCompare.gte(permission, PermissionLevel.Admin),
+    [permission],
+  );
 
   const { memberId } = useLocalContext();
 
   useEffect(() => {
     if (isSuccess) {
+      const allAns = data.filter(
+        (d) => d.type === AppDataType.UserAnswer,
+      ) as UserAnswerAppData[];
+      setAllAnswersAppData(allAns);
       setUserAnswerData(
-        data.find(
-          (d) => d.type === AppDataType.UserAnswer && d.member.id === memberId,
-        ) as UserAnswerAppData,
+        allAns.find((d) => d.member.id === memberId) as UserAnswerAppData,
       );
     }
   }, [isSuccess, data, memberId]);
@@ -41,7 +53,11 @@ const useUserAnswer = (): {
       postAppData(getDefaultUserAnswerAppData(userAnswer));
     }
   };
-  return { userAnswer: userAnswerAppData?.data, submitAnswer };
+  return {
+    userAnswer: userAnswerAppData?.data,
+    submitAnswer,
+    allAnswersAppData: isAdmin ? allAnswersAppData : undefined,
+  };
 };
 
-export default useUserAnswer;
+export default useUserAnswers;

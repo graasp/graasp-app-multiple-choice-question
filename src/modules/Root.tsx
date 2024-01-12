@@ -95,11 +95,11 @@ const theme = responsiveFontSizes(
     },
     typography: {
       h1: {
-        fontSize: '2rem',
-        textDecorationLine: 'underline',
+        fontSize: '1.8rem',
       },
       h2: {
-        fontSize: '1.8rem',
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
       },
     },
   }),
