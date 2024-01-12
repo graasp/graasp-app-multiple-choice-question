@@ -14,6 +14,7 @@ import { UserAnswer } from '@/interfaces/userAnswer';
 const useUserAnswers = (): {
   userAnswer?: UserAnswer;
   submitAnswer: (userAnswer: UserAnswer) => void;
+  deleteAnswer: (id?: UserAnswerAppData['id']) => void;
   allAnswersAppData?: UserAnswerAppData[];
 } => {
   const { data, isSuccess } = hooks.useAppData();
@@ -22,6 +23,7 @@ const useUserAnswers = (): {
     useState<UserAnswerAppData[]>();
   const { mutate: postAppData } = mutations.usePostAppData();
   const { mutate: patchAppData } = mutations.usePatchAppData();
+  const { mutate: deleteAppData } = mutations.useDeleteAppData();
   const { permission } = useLocalContext();
 
   const isAdmin = useMemo(
@@ -53,10 +55,19 @@ const useUserAnswers = (): {
       postAppData(getDefaultUserAnswerAppData(userAnswer));
     }
   };
+
+  const deleteAnswer = (id?: UserAnswerAppData['id']): void => {
+    if (id) {
+      deleteAppData({ id });
+    } else if (userAnswerAppData) {
+      deleteAppData({ id: userAnswerAppData?.id });
+    }
+  };
   return {
     userAnswer: userAnswerAppData?.data,
     submitAnswer,
     allAnswersAppData: isAdmin ? allAnswersAppData : undefined,
+    deleteAnswer,
   };
 };
 

@@ -2,7 +2,10 @@
   "translations": {
     "Welcome to the Graasp App Starter Kit": "Welcome to the Graasp App Starter Kit",
     "Answers": "Answers",
-    "MCQ": {},
+    "MCQ": {
+      "SUBMIT_OK_TOOLTIP": "Your answer has been submitted.",
+      "RESET_ANSWER": "Reset your answer."
+    },
     "ANSWERS": {
       "TITLE": "Answers",
       "TABLE": {
