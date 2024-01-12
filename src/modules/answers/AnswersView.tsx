@@ -32,16 +32,12 @@ const AnswersView: FC = () => {
           </TableHead>
           <TableBody>
             {allAnswersAppData &&
-              allAnswersAppData.map((userAnswerAppData, index) => {
-                // eslint-disable-next-line no-console
-                console.log(userAnswerAppData, index);
-                return (
-                  <UserAnswerRow
-                    key={index}
-                    userAnswerAppData={userAnswerAppData}
-                  />
-                );
-              })}
+              allAnswersAppData.map((userAnswerAppData, index) => (
+                <UserAnswerRow
+                  key={index}
+                  userAnswerAppData={userAnswerAppData}
+                />
+              ))}
           </TableBody>
         </Table>
       </TableContainer>

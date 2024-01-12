@@ -23,8 +23,7 @@ const MCQView: FC = () => {
   const { answers, question } = useSettings();
   const { defaultAnswer } = answers;
   const { submitAnswer, userAnswer, deleteAnswer } = useUserAnswer();
-  // eslint-disable-next-line no-console
-  console.log(userAnswer?.singleKey);
+
   const handleChange = (
     _e: ChangeEvent<HTMLInputElement>,
     newKey: AnswerKey,
