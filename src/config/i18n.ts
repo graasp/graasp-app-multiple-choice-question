@@ -21,6 +21,7 @@ declare module 'react-i18next' {
 i18n.use(initReactI18next).init({
   resources,
   lng: 'en',
+  fallbackLng: 'en',
   // debug only when not in production
   debug: import.meta.env.DEV,
   ns: [defaultNS],
