@@ -18,6 +18,8 @@ export const makeSettingsAnswersRowCy = (index: number): string =>
 export const MCQ_QUESTION_CY = 'mcq-question';
 export const makeMcqAnswersCy = (index: number): string =>
   `mcq-answer-${index}`;
+export const makeMcqMultipleAnswersCy = (index: number): string =>
+  `mcq-multiple-answer-${index}`;
 
 export const buildDataCy = (selector: string): string =>
   `[data-cy=${selector}]`;
