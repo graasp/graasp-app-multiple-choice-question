@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import CheckIcon from '@mui/icons-material/Check';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ReplayIcon from '@mui/icons-material/Replay';
-import { IconButton } from '@mui/material';
 import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
+import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -37,13 +38,18 @@ const MCQView: FC = () => {
       <Stack direction="column" spacing={1} alignItems="center">
         {userAnswer && (
           <>
+            <Tooltip title={t('SUBMIT_OK_TOOLTIP')}>
+              <Chip
+                color="info"
+                icon={<CheckCircleOutlineIcon />}
+                label={t('SUBMIT_OK_HELPER')}
+                variant="outlined"
+              />
+            </Tooltip>
             <Tooltip title={t('RESET_ANSWER')}>
               <IconButton onClick={() => deleteAnswer()}>
                 <ReplayIcon />
               </IconButton>
-            </Tooltip>
-            <Tooltip title={t('SUBMIT_OK_TOOLTIP')}>
-              <CheckIcon color="success" />
             </Tooltip>
           </>
         )}

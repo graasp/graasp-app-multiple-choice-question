@@ -4,6 +4,7 @@
     "Answers": "Answers",
     "MCQ": {
       "SUBMIT_OK_TOOLTIP": "Your answer has been submitted.",
+      "SUBMIT_OK_HELPER": "Submitted",
       "RESET_ANSWER": "Reset your answer."
     },
     "ANSWERS": {
