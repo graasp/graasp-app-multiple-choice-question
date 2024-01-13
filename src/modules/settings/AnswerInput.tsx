@@ -23,7 +23,7 @@ const AnswerInput: FC<{
   selectDefault: boolean;
   onSelectDefault: (checked: boolean) => void;
   onDelete: (index: number) => void;
-  multiDefaults?: boolean;
+  multipleAnswers?: boolean;
 }> = ({
   isKeyUnique,
   onChange,
@@ -32,7 +32,7 @@ const AnswerInput: FC<{
   index,
   onDelete,
   selectDefault,
-  multiDefaults = false,
+  multipleAnswers = true,
 }) => {
   const { label, key } = answer;
   const { t } = useTranslation('translations', {
@@ -70,7 +70,7 @@ const AnswerInput: FC<{
   return (
     <TableRow data-cy={makeSettingsAnswersRowCy(index)}>
       <TableCell align="right" padding="checkbox">
-        {multiDefaults ? (
+        {multipleAnswers ? (
           <Checkbox
             checked={selectDefault}
             onChange={(e) => {

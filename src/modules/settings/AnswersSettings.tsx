@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
+import Switch from '@mui/material/Switch';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -49,6 +51,13 @@ const AnswersSettingsEdit: FC<{
     onChange({ ...answers, answers: a });
   };
 
+  const handleMultipleAnswerChange = (
+    _event: unknown,
+    checked: boolean,
+  ): void => {
+    onChange({ ...answers, multipleAnswers: checked });
+  };
+
   const handleSelectDefault = (key: AnswerKey, add: boolean): void => {
     // eslint-disable-next-line no-console, @typescript-eslint/no-unused-expressions
     add ? console.log('Add: ', key) : console.log('Remove: ', key);
@@ -70,6 +79,12 @@ const AnswersSettingsEdit: FC<{
   return (
     <Stack spacing={1}>
       <Typography variant="h2">{t('TITLE')}</Typography>
+      <FormControlLabel
+        control={<Switch />}
+        label={t('MULTIPLE_ANS_SWITCH_LABEL')}
+        checked={multipleAnswers}
+        onChange={handleMultipleAnswerChange}
+      />
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="answers table">
           <TableHead>
@@ -85,6 +100,7 @@ const AnswersSettingsEdit: FC<{
           <TableBody>
             {answers.answers.map((answer, index) => (
               <AnswerInput
+                multipleAnswers={multipleAnswers}
                 answer={answer}
                 index={index}
                 key={index}
