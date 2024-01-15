@@ -20,6 +20,9 @@ Sentry.init({
   ...generateSentryConfig(),
 });
 
+// eslint-disable-next-line no-console
+console.log('MOCK_API', MOCK_API);
+
 // setup mocked api for cypress or standalone app
 /* istanbul ignore next */
 if (MOCK_API) {
