@@ -15,6 +15,7 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 
 import { AnswersSettings } from '@/config/appSettings';
+import { SETTINGS_ANSWERS_ADD_BTN_CY } from '@/config/selectors';
 import { Answer, AnswerKey, getNewAnswer } from '@/interfaces/answers';
 
 import AnswerInput from './AnswerInput';
@@ -110,7 +111,11 @@ const AnswersSettingsEdit: FC<{
           <TableFooter>
             <TableRow>
               <TableCell colSpan={3}>
-                <Button startIcon={<AddIcon />} onClick={addNewAnswer}>
+                <Button
+                  data-cy={SETTINGS_ANSWERS_ADD_BTN_CY}
+                  startIcon={<AddIcon />}
+                  onClick={addNewAnswer}
+                >
                   {t('NEW_ANSWER_BTN')}
                 </Button>
               </TableCell>

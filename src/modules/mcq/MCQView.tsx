@@ -13,6 +13,7 @@ import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
+import { MCQ_QUESTION_CY, makeMcqAnswersCy } from '@/config/selectors';
 import useUserAnswer from '@/hooks/useUserAnswers';
 import { AnswerKey } from '@/interfaces/answers';
 
@@ -40,7 +41,7 @@ const MCQView: FC = () => {
   return (
     <Stack spacing={1} justifyContent="space-between" direction="row">
       <Box>
-        <Typography sx={{ mb: 1 }} variant="h6">
+        <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
           {question.label}
         </Typography>
         <FormControl>
@@ -51,6 +52,7 @@ const MCQView: FC = () => {
           >
             {answers.answers.map((answer, index) => (
               <FormControlLabel
+                data-cy={makeMcqAnswersCy(index)}
                 key={index}
                 value={answer.key}
                 control={<Radio />}
