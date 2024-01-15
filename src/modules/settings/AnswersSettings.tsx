@@ -59,8 +59,6 @@ const AnswersSettingsEdit: FC<{
   };
 
   const handleSelectDefault = (key: AnswerKey, add: boolean): void => {
-    // eslint-disable-next-line no-console, @typescript-eslint/no-unused-expressions
-    add ? console.log('Add: ', key) : console.log('Remove: ', key);
     let newDef = [...defaultAnswer];
     if (add) {
       if (!multipleAnswers) {
