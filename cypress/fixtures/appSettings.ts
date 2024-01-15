@@ -34,3 +34,11 @@ export const ANSWERS_SETTING = {
   updatedAt: new Date().toISOString(),
   item: MOCK_SERVER_DISCRIMINATED_ITEM,
 };
+
+export const ANSWERS_SETTING_MULTI_ANSWERS = {
+  ...ANSWERS_SETTING,
+  data: {
+    ...ANSWERS_SETTING.data,
+    multipleAnswers: true,
+  },
+};

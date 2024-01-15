@@ -4,6 +4,7 @@
     "Answers": "Answers",
     "MCQ": {
       "SUBMIT_OK_TOOLTIP": "Your answer has been submitted.",
+      "SUBMIT_OK_HELPER": "Submitted",
       "RESET_ANSWER": "Reset your answer."
     },
     "ANSWERS": {
@@ -30,6 +31,7 @@
         "TITLE": "Answers",
         "NEW_ANSWER_BTN": "Add a new answer",
         "DEFAULT_ANSWER_TABLE_HEAD": "Default answer",
+        "MULTIPLE_ANS_SWITCH_LABEL": "Allow multiple answers.",
         "INPUT": {
           "KEY_HELP_WARNING": "Please, provide a key.",
           "KEY_HELP_ERROR": "Please, make sure each key is unique.",
