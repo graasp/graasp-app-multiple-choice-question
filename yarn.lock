@@ -7029,7 +7029,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-i18next: "npm:13.5.0"
-    react-toastify: "npm:10.0.0"
+    react-toastify: "npm:10.0.1"
     typescript: "npm:5.3.3"
     uuid: "npm:9.0.1"
     vite: "npm:^5.0.11"
@@ -9537,15 +9537,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-toastify@npm:10.0.0":
-  version: 10.0.0
-  resolution: "react-toastify@npm:10.0.0"
+"react-toastify@npm:10.0.1":
+  version: 10.0.1
+  resolution: "react-toastify@npm:10.0.1"
   dependencies:
     clsx: "npm:^2.1.0"
   peerDependencies:
     react: ">=16"
     react-dom: ">=16"
-  checksum: 73800095a358c40540533021ca5afda1aba421de667d596804506a18d5fc6cdc87422f5264c40674c04fe7d394e1d92dbf28c2f17a59cb95d3522983d0113d03
+  checksum: 25accc67f30c176578d19e2c7c28beb1f1621dac02709738c2b7fb21222863d9456b1bc2823e9bb978feac345b5cf6dcf53f210f962b707947b08d5f204cdf21
   languageName: node
   linkType: hard
 
