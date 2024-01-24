@@ -17,7 +17,7 @@ const MultipleAnswers: FC<{
   answersSettings: AnswersSettings;
 }> = ({ userAnswer, answersSettings }) => {
   const { answers } = answersSettings;
-  const { submitAnswer } = useUserAnswers();
+  const { selectAnswer } = useUserAnswers();
 
   // TODO: setup default answer
   const [selectedKeys, setSelectedKeys] = useState<AnswerKey[]>([]);
@@ -36,11 +36,11 @@ const MultipleAnswers: FC<{
 
   const handleChange = (key: AnswerKey, checked: boolean): void => {
     if (checked && !isSelected(key)) {
-      submitAnswer({
+      selectAnswer({
         multipleKey: [...selectedKeys, key],
       });
     } else if (!checked) {
-      submitAnswer({
+      selectAnswer({
         multipleKey: selectedKeys.filter((k) => k !== key),
       });
     }

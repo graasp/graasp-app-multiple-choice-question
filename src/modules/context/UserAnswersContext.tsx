@@ -17,16 +17,18 @@ import {
   getDefaultUserAnswerAppData,
 } from '@/config/appData';
 import { hooks, mutations } from '@/config/queryClient';
-import { UserAnswer } from '@/interfaces/userAnswer';
+import { UserAnswer, UserAnswerStatus } from '@/interfaces/userAnswer';
 
 type UserAnswersContextType = {
   userAnswer?: UserAnswer;
-  submitAnswer: (userAnswer: UserAnswer) => void;
+  selectAnswer: (userAnswer: UserAnswer) => void;
+  submitAnswer: () => void;
   deleteAnswer: (id?: UserAnswerAppData['id']) => void;
   allAnswersAppData?: UserAnswerAppData[];
 };
 
 const defaultContextValue: UserAnswersContextType = {
+  selectAnswer: () => null,
   submitAnswer: () => null,
   deleteAnswer: () => null,
 };
@@ -65,19 +67,41 @@ export const UserAnswersProvider: FC<{
     }
   }, [isSuccess, data, memberId]);
 
-  const submitAnswer = useMemo(
+  const selectAnswer = useMemo(
     () =>
       (userAnswer: UserAnswer): void => {
+        const payloadData = {
+          ...userAnswer,
+          status: UserAnswerStatus.Saved,
+        };
         if (userAnswerAppData?.id) {
           patchAppData({
             ...userAnswerAppData,
-            data: userAnswer,
+            data: payloadData,
           });
         } else {
-          postAppData(getDefaultUserAnswerAppData(userAnswer));
+          postAppData(getDefaultUserAnswerAppData(payloadData));
         }
       },
     [patchAppData, postAppData, userAnswerAppData],
+  );
+
+  const submitAnswer = useMemo(
+    () => (): void => {
+      if (userAnswerAppData?.id) {
+        const payloadData = {
+          ...userAnswerAppData.data,
+          status: UserAnswerStatus.Submitted,
+        };
+        patchAppData({
+          ...userAnswerAppData,
+          data: payloadData,
+        });
+      } else {
+        throw new Error('No answer to submit.');
+      }
+    },
+    [patchAppData, userAnswerAppData],
   );
 
   const deleteAnswer = useMemo(
@@ -94,11 +118,19 @@ export const UserAnswersProvider: FC<{
   const contextValue = useMemo(
     () => ({
       userAnswer: userAnswerAppData?.data,
+      selectAnswer,
       submitAnswer,
       allAnswersAppData: isAdmin ? allAnswersAppData : undefined,
       deleteAnswer,
     }),
-    [allAnswersAppData, deleteAnswer, isAdmin, submitAnswer, userAnswerAppData],
+    [
+      allAnswersAppData,
+      deleteAnswer,
+      isAdmin,
+      selectAnswer,
+      submitAnswer,
+      userAnswerAppData?.data,
+    ],
   );
 
   return (

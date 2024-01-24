@@ -17,13 +17,13 @@ const SingleAnswer: FC<{
   answersSettings: AnswersSettings;
 }> = ({ userAnswer, answersSettings }) => {
   const { answers } = answersSettings;
-  const { submitAnswer } = useUserAnswers();
+  const { selectAnswer } = useUserAnswers();
 
   const handleChange = (
     _e: ChangeEvent<HTMLInputElement>,
     newKey: AnswerKey,
   ): void => {
-    submitAnswer({
+    selectAnswer({
       singleKey: newKey,
     });
   };

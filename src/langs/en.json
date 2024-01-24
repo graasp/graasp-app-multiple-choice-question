@@ -5,7 +5,11 @@
     "MCQ": {
       "SUBMIT_OK_TOOLTIP": "Your answer has been submitted.",
       "SUBMIT_OK_HELPER": "Submitted",
-      "RESET_ANSWER": "Reset your answer."
+      "SAVED_TOOLTIP": "Your answer has been saved.",
+      "SAVED_HELPER": "Saved",
+      "RESET_ANSWER": "Reset your answer.",
+      "SUBMIT": "Submit",
+      "RESET": "Reset"
     },
     "ANSWERS": {
       "TITLE": "Answers",
