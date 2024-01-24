@@ -7,9 +7,10 @@ import FormGroup from '@mui/material/FormGroup';
 
 import { AnswersSettings } from '@/config/appSettings';
 import { makeMcqMultipleAnswersCy } from '@/config/selectors';
-import useUserAnswers from '@/hooks/useUserAnswers';
 import { AnswerKey } from '@/interfaces/answers';
 import { UserAnswer } from '@/interfaces/userAnswer';
+
+import useUserAnswers from '../context/UserAnswersContext';
 
 const MultipleAnswers: FC<{
   userAnswer?: UserAnswer;

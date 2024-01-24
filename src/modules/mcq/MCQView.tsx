@@ -11,9 +11,9 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
 import { MCQ_QUESTION_CY } from '@/config/selectors';
-import useUserAnswer from '@/hooks/useUserAnswers';
 
 import { useSettings } from '../context/SettingsContext';
+import useUserAnswer from '../context/UserAnswersContext';
 import MultipleAnswers from './MultipleAnswers';
 import SingleAnswer from './SingleAnswer';
 
