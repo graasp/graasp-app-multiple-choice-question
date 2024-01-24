@@ -25,7 +25,6 @@ const defaultSettingsValues: AllSettingsType = {
   answers: {
     answers: [],
     multipleAnswers: false,
-    defaultAnswer: [],
   },
   general: {
     required: false,

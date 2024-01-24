@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useMemo } from 'react';
+import { ChangeEvent, FC } from 'react';
 
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -15,12 +15,8 @@ const SingleAnswer: FC<{
   userAnswer?: UserAnswer;
   answersSettings: AnswersSettings;
 }> = ({ userAnswer, answersSettings }) => {
-  const { answers, defaultAnswer } = answersSettings;
+  const { answers } = answersSettings;
   const { submitAnswer } = useUserAnswers();
-  const defaultValue = useMemo(
-    () => (defaultAnswer.length > 0 ? defaultAnswer[0] : undefined),
-    [defaultAnswer],
-  );
 
   const handleChange = (
     _e: ChangeEvent<HTMLInputElement>,
@@ -35,7 +31,7 @@ const SingleAnswer: FC<{
       <RadioGroup
         name="radio-group"
         onChange={handleChange}
-        value={userAnswer?.singleKey ?? defaultValue}
+        value={userAnswer?.singleKey}
       >
         {answers.map((answer, index) => (
           <FormControlLabel

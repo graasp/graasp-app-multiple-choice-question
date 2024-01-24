@@ -2,9 +2,7 @@ import { ChangeEventHandler, FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import DeleteIcon from '@mui/icons-material/Delete';
-import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
-import Radio from '@mui/material/Radio';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TextField from '@mui/material/TextField';
@@ -20,20 +18,8 @@ const AnswerInput: FC<{
   index: number;
   isKeyUnique: boolean;
   onChange: (answer: Answer) => void;
-  selectDefault: boolean;
-  onSelectDefault: (checked: boolean) => void;
   onDelete: (index: number) => void;
-  multipleAnswers?: boolean;
-}> = ({
-  isKeyUnique,
-  onChange,
-  onSelectDefault,
-  answer,
-  index,
-  onDelete,
-  selectDefault,
-  multipleAnswers = true,
-}) => {
+}> = ({ isKeyUnique, onChange, answer, index, onDelete }) => {
   const { label, key } = answer;
   const { t } = useTranslation('translations', {
     keyPrefix: 'SETTINGS.ANSWERS.INPUT',
@@ -66,28 +52,8 @@ const AnswerInput: FC<{
     }
     return ' ';
   }, [keyTextFieldColor, t]);
-  const isKeyValid = useMemo(() => key?.length > 0, [key]);
   return (
     <TableRow data-cy={makeSettingsAnswersRowCy(index)}>
-      <TableCell align="right" padding="checkbox">
-        {multipleAnswers ? (
-          <Checkbox
-            checked={selectDefault}
-            onChange={(e) => {
-              onSelectDefault(e.target.checked);
-            }}
-            disabled={!isKeyValid}
-          />
-        ) : (
-          <Radio
-            checked={selectDefault}
-            onChange={(e) => {
-              onSelectDefault(e.target.checked);
-            }}
-            disabled={!isKeyValid}
-          />
-        )}
-      </TableCell>
       <TableCell>
         <TextField
           inputProps={{
@@ -98,9 +64,10 @@ const AnswerInput: FC<{
           onChange={onKeyChange}
           label={t('KEY_LABEL')}
           helperText={keyHelperText}
+          fullWidth
         />
       </TableCell>
-      <TableCell sx={{ width: '50%' }}>
+      <TableCell sx={{ width: '70%' }}>
         <TextField
           fullWidth
           value={label}
