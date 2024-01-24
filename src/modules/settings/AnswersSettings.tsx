@@ -18,7 +18,7 @@ import Typography from '@mui/material/Typography';
 
 import { AnswersSettings } from '@/config/appSettings';
 import { SETTINGS_ANSWERS_ADD_BTN_CY } from '@/config/selectors';
-import { Answer, AnswerKey, getNewAnswer } from '@/interfaces/answers';
+import { Answer, getNewAnswer } from '@/interfaces/answers';
 
 import AnswerInput from './AnswerInput';
 
@@ -30,12 +30,7 @@ const AnswersSettingsEdit: FC<{
     keyPrefix: 'SETTINGS.ANSWERS',
   });
 
-  const { defaultAnswer, multipleAnswers } = answers;
-
-  const isDefault = (
-    key: AnswerKey,
-    defaultAns: AnswerKey[] | undefined,
-  ): boolean => defaultAns?.includes(key) ?? false;
+  const { multipleAnswers } = answers;
 
   const addNewAnswer = (): void => {
     onChange({
@@ -58,22 +53,6 @@ const AnswersSettingsEdit: FC<{
     onChange({ ...answers, multipleAnswers: checked });
   };
 
-  const handleSelectDefault = (key: AnswerKey, add: boolean): void => {
-    let newDef = [...defaultAnswer];
-    if (add) {
-      if (!multipleAnswers) {
-        newDef = [];
-      }
-      newDef.push(key);
-    } else {
-      newDef = defaultAnswer.filter((a) => a !== key);
-    }
-    onChange({
-      ...answers,
-      defaultAnswer: newDef,
-    });
-  };
-
   return (
     <Stack spacing={1}>
       <Typography variant="h2">{t('TITLE')}</Typography>
@@ -87,9 +66,6 @@ const AnswersSettingsEdit: FC<{
         <Table sx={{ minWidth: 650 }} aria-label="answers table">
           <TableHead>
             <TableRow>
-              <TableCell align="right">
-                {t('DEFAULT_ANSWER_TABLE_HEAD')}
-              </TableCell>
               <TableCell>{t('INPUT.KEY_LABEL')}</TableCell>
               <TableCell>{t('INPUT.ANSWER_LABEL')}</TableCell>
               <TableCell />
@@ -98,27 +74,20 @@ const AnswersSettingsEdit: FC<{
           <TableBody>
             {answers.answers.map((answer, index) => (
               <AnswerInput
-                multipleAnswers={multipleAnswers}
                 answer={answer}
                 index={index}
                 key={index}
                 isKeyUnique
                 onChange={(ans) => {
-                  if (isDefault(answer.key, defaultAnswer)) {
-                    handleSelectDefault(ans.key, true);
-                  }
                   const a = [...answers.answers];
                   a[index] = ans;
                   handleAnswersChange(a);
                 }}
-                // eslint-disable-next-line react/jsx-no-bind, no-console
-                onSelectDefault={(d) => handleSelectDefault(answer.key, d)}
                 onDelete={(i) => {
                   const a = [...answers.answers];
                   a.splice(i, 1);
                   handleAnswersChange(a);
                 }}
-                selectDefault={isDefault(answer.key, defaultAnswer)}
               />
             ))}
           </TableBody>

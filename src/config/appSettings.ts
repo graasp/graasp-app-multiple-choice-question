@@ -1,4 +1,4 @@
-import { Answer, AnswerKey } from '@/interfaces/answers';
+import { Answer } from '@/interfaces/answers';
 
 export type QuestionSettings = {
   label: string;
@@ -6,7 +6,6 @@ export type QuestionSettings = {
 
 export type AnswersSettings = {
   answers: Array<Answer>;
-  defaultAnswer: AnswerKey[];
   multipleAnswers: boolean;
 };
 
