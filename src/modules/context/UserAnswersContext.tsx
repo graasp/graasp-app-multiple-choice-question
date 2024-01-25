@@ -40,7 +40,8 @@ export const UserAnswersProvider: FC<{
   children: ReactElement | ReactElement[];
 }> = ({ children }) => {
   const { data, isSuccess } = hooks.useAppData();
-  const [userAnswerAppData, setUserAnswerData] = useState<UserAnswerAppData>();
+  const [userAnswerAppData, setUserAnswerAppData] =
+    useState<UserAnswerAppData>();
   const [allAnswersAppData, setAllAnswersAppData] =
     useState<UserAnswerAppData[]>();
   const { mutate: postAppData } = mutations.usePostAppData();
@@ -61,9 +62,7 @@ export const UserAnswersProvider: FC<{
         (d) => d.type === AppDataType.UserAnswer,
       ) as UserAnswerAppData[];
       setAllAnswersAppData(allAns);
-      setUserAnswerData(
-        allAns.find((d) => d.member.id === memberId) as UserAnswerAppData,
-      );
+      setUserAnswerAppData(allAns.find((d) => d.member.id === memberId));
     }
   }, [isSuccess, data, memberId]);
 
