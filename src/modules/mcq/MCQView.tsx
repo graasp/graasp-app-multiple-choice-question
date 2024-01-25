@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import BackupIcon from '@mui/icons-material/Backup';
@@ -28,6 +28,14 @@ const MCQView: FC = () => {
   const { required } = general;
   const { userAnswer, deleteAnswer, submitAnswer } = useUserAnswer();
   const { multipleAnswers } = answers;
+  const showSubmitButton = useMemo(
+    () => userAnswer?.status === UserAnswerStatus.Saved,
+    [userAnswer],
+  );
+  const showResetButton = useMemo(
+    () => typeof userAnswer !== 'undefined',
+    [userAnswer],
+  );
   return (
     <Stack spacing={1} justifyContent="space-between" direction="row">
       <Box>
@@ -40,26 +48,8 @@ const MCQView: FC = () => {
         ) : (
           <SingleAnswer userAnswer={userAnswer} answersSettings={answers} />
         )}
-        <Collapse>
-          <Stack mt={1} direction="row" spacing={1}>
-            <Button
-              disabled={!userAnswer}
-              variant="contained"
-              onClick={submitAnswer}
-              startIcon={<SendIcon />}
-            >
-              {t('SUBMIT')}
-            </Button>
-            <Tooltip title={t('RESET_ANSWER')}>
-              <Button
-                disabled={!userAnswer}
-                variant="contained"
-                onClick={() => submitAnswer()}
-                startIcon={<SendIcon />}
-              >
-                {t('SUBMIT')}
-              </Button>
-            </Tooltip>
+        <Stack sx={{ mt: 1 }} direction="row" spacing={1}>
+          <Collapse in={showResetButton}>
             <Tooltip title={t('RESET_ANSWER')}>
               <Button
                 disabled={!userAnswer}
@@ -70,8 +60,18 @@ const MCQView: FC = () => {
                 {t('RESET')}
               </Button>
             </Tooltip>
-          </Stack>
-        </Collapse>
+          </Collapse>
+          <Collapse in={showSubmitButton}>
+            <Button
+              disabled={!userAnswer}
+              variant="contained"
+              onClick={() => submitAnswer()}
+              startIcon={<SendIcon />}
+            >
+              {t('SUBMIT')}
+            </Button>
+          </Collapse>
+        </Stack>
       </Box>
       <Stack direction="column" spacing={1} alignItems="center">
         {userAnswer?.status === UserAnswerStatus.Submitted && (
