@@ -5,6 +5,7 @@ import BackupIcon from '@mui/icons-material/Backup';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ReplayIcon from '@mui/icons-material/Replay';
 import SendIcon from '@mui/icons-material/Send';
+import WarningIcon from '@mui/icons-material/WarningRounded';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
@@ -22,15 +23,16 @@ import SingleAnswer from './SingleAnswer';
 
 const MCQView: FC = () => {
   const { t } = useTranslation('translations', { keyPrefix: 'MCQ' });
-  const { answers, question } = useSettings();
+  const { answers, question, general } = useSettings();
+  const { required } = general;
   const { userAnswer, deleteAnswer, submitAnswer } = useUserAnswer();
   const { multipleAnswers } = answers;
-
   return (
     <Stack spacing={1} justifyContent="space-between" direction="row">
       <Box>
         <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
           {question.label}
+          {/* TODO: Put little star to indicate required question. */}
         </Typography>
         {multipleAnswers ? (
           <MultipleAnswers userAnswer={userAnswer} answersSettings={answers} />
@@ -74,6 +76,17 @@ const MCQView: FC = () => {
             <Chip
               icon={<BackupIcon />}
               label={t('SAVED_HELPER')}
+              variant="outlined"
+            />
+          </Tooltip>
+        )}
+        {/* TODO: Check the expression below */}
+        {typeof userAnswer === 'undefined' && required && (
+          <Tooltip title={t('REQUIRED_TOOLTIP')}>
+            <Chip
+              color="warning"
+              icon={<WarningIcon />}
+              label={t('REQUIRED_CHIP')}
               variant="outlined"
             />
           </Tooltip>

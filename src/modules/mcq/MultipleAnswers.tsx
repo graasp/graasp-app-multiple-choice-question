@@ -19,7 +19,6 @@ const MultipleAnswers: FC<{
   const { answers } = answersSettings;
   const { selectAnswer } = useUserAnswers();
 
-  // TODO: setup default answer
   const [selectedKeys, setSelectedKeys] = useState<AnswerKey[]>([]);
 
   useEffect(() => {
