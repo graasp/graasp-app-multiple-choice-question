@@ -48,7 +48,7 @@
       },
       "GENERAL": {
         "TITLE": "General",
-        "REQUIRED_SWITCH_LABEL": "Mark the question as requireds"
+        "REQUIRED_SWITCH_LABEL": "Mark the question as required."
       }
     }
   }

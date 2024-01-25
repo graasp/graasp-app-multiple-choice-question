@@ -76,6 +76,7 @@ const SettingsView: FC = () => {
   return (
     <Stack data-cy={SETTINGS_VIEW_CY} spacing={2}>
       <Typography variant="h1">{t('SETTINGS.TITLE')}</Typography>
+      <GeneralSettingsEdit general={general} onChange={setGeneral} />
       <QuestionSettingsEdit
         question={question}
         onChange={(newSetting: QuestionSettings) => {
@@ -101,7 +102,6 @@ const SettingsView: FC = () => {
           {t('SETTINGS.SAVE_BTN')}
         </Button>
       </Box>
-      <GeneralSettingsEdit general={general} onChange={setGeneral} />
     </Stack>
   );
 };

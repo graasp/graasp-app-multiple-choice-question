@@ -9,6 +9,7 @@ import WarningIcon from '@mui/icons-material/WarningRounded';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
+import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
@@ -32,33 +33,45 @@ const MCQView: FC = () => {
       <Box>
         <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
           {question.label}
-          {/* TODO: Put little star to indicate required question. */}
+          {required && <sup>*</sup>}
         </Typography>
         {multipleAnswers ? (
           <MultipleAnswers userAnswer={userAnswer} answersSettings={answers} />
         ) : (
           <SingleAnswer userAnswer={userAnswer} answersSettings={answers} />
         )}
-        <Stack mt={1} direction="row" spacing={1}>
-          <Button
-            disabled={!userAnswer}
-            variant="contained"
-            onClick={submitAnswer}
-            startIcon={<SendIcon />}
-          >
-            {t('SUBMIT')}
-          </Button>
-          <Tooltip title={t('RESET_ANSWER')}>
+        <Collapse>
+          <Stack mt={1} direction="row" spacing={1}>
             <Button
               disabled={!userAnswer}
-              variant="outlined"
-              onClick={() => deleteAnswer()}
-              startIcon={<ReplayIcon />}
+              variant="contained"
+              onClick={submitAnswer}
+              startIcon={<SendIcon />}
             >
-              {t('RESET')}
+              {t('SUBMIT')}
             </Button>
-          </Tooltip>
-        </Stack>
+            <Tooltip title={t('RESET_ANSWER')}>
+              <Button
+                disabled={!userAnswer}
+                variant="contained"
+                onClick={() => submitAnswer()}
+                startIcon={<SendIcon />}
+              >
+                {t('SUBMIT')}
+              </Button>
+            </Tooltip>
+            <Tooltip title={t('RESET_ANSWER')}>
+              <Button
+                disabled={!userAnswer}
+                variant="outlined"
+                onClick={() => deleteAnswer()}
+                startIcon={<ReplayIcon />}
+              >
+                {t('RESET')}
+              </Button>
+            </Tooltip>
+          </Stack>
+        </Collapse>
       </Box>
       <Stack direction="column" spacing={1} alignItems="center">
         {userAnswer?.status === UserAnswerStatus.Submitted && (
@@ -80,7 +93,6 @@ const MCQView: FC = () => {
             />
           </Tooltip>
         )}
-        {/* TODO: Check the expression below */}
         {typeof userAnswer === 'undefined' && required && (
           <Tooltip title={t('REQUIRED_TOOLTIP')}>
             <Chip
