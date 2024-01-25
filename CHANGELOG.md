@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.0.2](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.1...v1.0.2) (2024-01-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/sdk to v3.4.1 ([#37](https://github.com/graasp/graasp-app-multiple-choice-question/issues/37)) ([0881a3e](https://github.com/graasp/graasp-app-multiple-choice-question/commit/0881a3ec4291e7d18c4093c5b566357021c25e73))
+* **deps:** update dependency @types/node to v20.11.5 ([#38](https://github.com/graasp/graasp-app-multiple-choice-question/issues/38)) ([617315a](https://github.com/graasp/graasp-app-multiple-choice-question/commit/617315af0c729fe4787ee236342f47e926fbca1b))
+* **deps:** update dependency react-i18next to v14 ([#14](https://github.com/graasp/graasp-app-multiple-choice-question/issues/14)) ([a05d2e5](https://github.com/graasp/graasp-app-multiple-choice-question/commit/a05d2e5c01fe306ee559c14169b63d5ed567e088))
+* **deps:** update dependency react-toastify to v10.0.4 ([#34](https://github.com/graasp/graasp-app-multiple-choice-question/issues/34)) ([d2558f0](https://github.com/graasp/graasp-app-multiple-choice-question/commit/d2558f0c25988f91ecd26ddc2527daada3441ff7))
+* **deps:** update mui (non-major) ([#5](https://github.com/graasp/graasp-app-multiple-choice-question/issues/5)) ([9ab00ff](https://github.com/graasp/graasp-app-multiple-choice-question/commit/9ab00ff0929207154bcfc9f5d212c89cbde140db))
+* remove default answer ([#46](https://github.com/graasp/graasp-app-multiple-choice-question/issues/46)) ([1075634](https://github.com/graasp/graasp-app-multiple-choice-question/commit/1075634a83648faa0ecc3cc38ff42ef1b09dc5b4))
+
 ## [1.0.1](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.0...v1.0.1) (2024-01-16)
 
 
