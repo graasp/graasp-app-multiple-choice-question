@@ -27,12 +27,14 @@ const SingleAnswer: FC<{
       singleKey: newKey,
     });
   };
+
   return (
     <FormControl>
       <RadioGroup
         name="radio-group"
         onChange={handleChange}
-        value={userAnswer?.singleKey}
+        // ⬇️ Give an empty string to set the component as 'controlled'.
+        value={userAnswer?.singleKey ?? ''}
       >
         {answers.map((answer, index) => (
           <FormControlLabel
