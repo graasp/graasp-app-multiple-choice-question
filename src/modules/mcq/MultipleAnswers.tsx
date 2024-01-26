@@ -7,16 +7,17 @@ import FormGroup from '@mui/material/FormGroup';
 
 import { AnswersSettings } from '@/config/appSettings';
 import { makeMcqMultipleAnswersCy } from '@/config/selectors';
-import useUserAnswers from '@/hooks/useUserAnswers';
 import { AnswerKey } from '@/interfaces/answers';
 import { UserAnswer } from '@/interfaces/userAnswer';
+
+import useUserAnswers from '../context/UserAnswersContext';
 
 const MultipleAnswers: FC<{
   userAnswer?: UserAnswer;
   answersSettings: AnswersSettings;
 }> = ({ userAnswer, answersSettings }) => {
   const { answers } = answersSettings;
-  const { submitAnswer } = useUserAnswers();
+  const { selectAnswer } = useUserAnswers();
 
   // TODO: setup default answer
   const [selectedKeys, setSelectedKeys] = useState<AnswerKey[]>([]);
@@ -35,11 +36,11 @@ const MultipleAnswers: FC<{
 
   const handleChange = (key: AnswerKey, checked: boolean): void => {
     if (checked && !isSelected(key)) {
-      submitAnswer({
+      selectAnswer({
         multipleKey: [...selectedKeys, key],
       });
     } else if (!checked) {
-      submitAnswer({
+      selectAnswer({
         multipleKey: selectedKeys.filter((k) => k !== key),
       });
     }

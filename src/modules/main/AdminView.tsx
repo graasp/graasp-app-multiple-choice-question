@@ -15,6 +15,7 @@ import {
 } from '@/config/selectors';
 
 import AnswersView from '../answers/AnswersView';
+import { UserAnswersProvider } from '../context/UserAnswersContext';
 import SettingsView from '../settings/SettingsView';
 
 enum Tabs {
@@ -52,7 +53,9 @@ const AdminView = (): JSX.Element => {
           />
         </TabList>
         <TabPanel value={Tabs.TABLE_VIEW} data-cy={TABLE_VIEW_PANE_CY}>
-          <AnswersView />
+          <UserAnswersProvider>
+            <AnswersView />
+          </UserAnswersProvider>
         </TabPanel>
         <TabPanel value={Tabs.SETTINGS_VIEW} data-cy={SETTINGS_VIEW_PANE_CY}>
           <SettingsView />

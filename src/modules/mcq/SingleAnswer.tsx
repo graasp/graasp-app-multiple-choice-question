@@ -7,22 +7,23 @@ import RadioGroup from '@mui/material/RadioGroup';
 
 import { AnswersSettings } from '@/config/appSettings';
 import { makeMcqAnswersCy } from '@/config/selectors';
-import useUserAnswers from '@/hooks/useUserAnswers';
 import { AnswerKey } from '@/interfaces/answers';
 import { UserAnswer } from '@/interfaces/userAnswer';
+
+import useUserAnswers from '../context/UserAnswersContext';
 
 const SingleAnswer: FC<{
   userAnswer?: UserAnswer;
   answersSettings: AnswersSettings;
 }> = ({ userAnswer, answersSettings }) => {
   const { answers } = answersSettings;
-  const { submitAnswer } = useUserAnswers();
+  const { selectAnswer } = useUserAnswers();
 
   const handleChange = (
     _e: ChangeEvent<HTMLInputElement>,
     newKey: AnswerKey,
   ): void => {
-    submitAnswer({
+    selectAnswer({
       singleKey: newKey,
     });
   };
