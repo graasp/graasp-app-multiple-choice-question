@@ -40,8 +40,8 @@ export const UserAnswersProvider: FC<{
   children: ReactElement | ReactElement[];
 }> = ({ children }) => {
   const { data, isSuccess } = hooks.useAppData<UserAnswer>({
-      type: AppDataType.UserAnswer,
-    });
+    type: AppDataType.UserAnswer,
+  });
   const [userAnswerAppData, setUserAnswerAppData] =
     useState<UserAnswerAppData>();
   const [allAnswersAppData, setAllAnswersAppData] =

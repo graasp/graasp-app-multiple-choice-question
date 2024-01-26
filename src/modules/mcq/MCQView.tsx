@@ -50,7 +50,7 @@ const MCQView: FC = () => {
             <Button
               disabled={!userAnswer}
               variant="outlined"
-              onClick={deleteAnswer}
+              onClick={() => deleteAnswer()}
               startIcon={<ReplayIcon />}
             >
               {t('RESET')}
