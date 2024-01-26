@@ -39,7 +39,9 @@ const UserAnswersContext =
 export const UserAnswersProvider: FC<{
   children: ReactElement | ReactElement[];
 }> = ({ children }) => {
-  const { data, isSuccess } = hooks.useAppData();
+  const { data, isSuccess } = hooks.useAppData<UserAnswer>({
+      type: AppDataType.UserAnswer,
+    });
   const [userAnswerAppData, setUserAnswerAppData] =
     useState<UserAnswerAppData>();
   const [allAnswersAppData, setAllAnswersAppData] =

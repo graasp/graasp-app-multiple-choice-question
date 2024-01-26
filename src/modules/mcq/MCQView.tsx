@@ -37,11 +37,11 @@ const MCQView: FC = () => {
         ) : (
           <SingleAnswer userAnswer={userAnswer} answersSettings={answers} />
         )}
-        <Stack sx={{ mt: 1 }} direction="row" spacing={1}>
+        <Stack mt={1} direction="row" spacing={1}>
           <Button
             disabled={!userAnswer}
             variant="contained"
-            onClick={() => submitAnswer()}
+            onClick={submitAnswer}
             startIcon={<SendIcon />}
           >
             {t('SUBMIT')}
@@ -50,7 +50,7 @@ const MCQView: FC = () => {
             <Button
               disabled={!userAnswer}
               variant="outlined"
-              onClick={() => deleteAnswer()}
+              onClick={deleteAnswer}
               startIcon={<ReplayIcon />}
             >
               {t('RESET')}
