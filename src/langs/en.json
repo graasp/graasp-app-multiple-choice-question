@@ -8,6 +8,8 @@
       "SAVED_TOOLTIP": "Your answer has been saved.",
       "SAVED_HELPER": "Saved",
       "RESET_ANSWER": "Reset your answer.",
+      "REQUIRED_CHIP": "Required",
+      "REQUIRED_TOOLTIP": "This question requires an answer.",
       "SUBMIT": "Submit",
       "RESET": "Reset"
     },
@@ -45,7 +47,8 @@
         }
       },
       "GENERAL": {
-        "TITLE": "General"
+        "TITLE": "General",
+        "REQUIRED_SWITCH_LABEL": "Mark the question as required."
       }
     }
   }

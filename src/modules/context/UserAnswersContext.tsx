@@ -71,6 +71,9 @@ export const UserAnswersProvider: FC<{
   const selectAnswer = useMemo(
     () =>
       (userAnswer: UserAnswer): void => {
+        if (userAnswer.multipleKey?.length === 0) {
+          throw new Error('You cannot select an empty answer.');
+        }
         const payloadData = {
           ...userAnswer,
           status: UserAnswerStatus.Saved,

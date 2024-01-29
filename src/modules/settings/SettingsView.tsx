@@ -9,11 +9,16 @@ import Typography from '@mui/material/Typography';
 
 import isEqual from 'lodash.isequal';
 
-import { AnswersSettings, QuestionSettings } from '@/config/appSettings';
+import {
+  AnswersSettings,
+  GeneralSettings,
+  QuestionSettings,
+} from '@/config/appSettings';
 import { SETTINGS_SAVE_BTN_CY, SETTINGS_VIEW_CY } from '@/config/selectors';
 
 import { useSettings } from '../context/SettingsContext';
 import AnswersSettingsEdit from './AnswersSettings';
+import GeneralSettingsEdit from './GeneralSettings';
 import QuestionSettingsEdit from './QuestionSettings';
 
 const SettingsView: FC = () => {
@@ -21,12 +26,14 @@ const SettingsView: FC = () => {
   const {
     question: questionSavedState,
     answers: answersSavedState,
+    general: generalSavedState,
     saveSettings,
   } = useSettings();
 
   const [question, setQuestion] =
     useState<QuestionSettings>(questionSavedState);
   const [answers, setAnswers] = useState<AnswersSettings>(answersSavedState);
+  const [general, setGeneral] = useState<GeneralSettings>(generalSavedState);
 
   const saveAllSettings = (): void => {
     saveSettings('question', question);
@@ -39,30 +46,37 @@ const SettingsView: FC = () => {
         return false;
       }),
     });
+    saveSettings('general', general);
   };
-  // eslint-disable-next-line no-console
-  console.log('Answers: ', answers);
 
   useEffect(() => setQuestion(questionSavedState), [questionSavedState]);
   useEffect(() => {
     setAnswers(answersSavedState);
-    // eslint-disable-next-line no-console
-    console.log(answersSavedState);
   }, [answersSavedState]);
+  useEffect(() => setGeneral(generalSavedState), [generalSavedState]);
 
   const disableSave = useMemo(() => {
     if (
       isEqual(questionSavedState, question) &&
-      isEqual(answersSavedState, answers)
+      isEqual(answersSavedState, answers) &&
+      isEqual(general, generalSavedState)
     ) {
       return true;
     }
     return false;
-  }, [answers, answersSavedState, question, questionSavedState]);
+  }, [
+    answers,
+    answersSavedState,
+    general,
+    generalSavedState,
+    question,
+    questionSavedState,
+  ]);
 
   return (
     <Stack data-cy={SETTINGS_VIEW_CY} spacing={2}>
       <Typography variant="h1">{t('SETTINGS.TITLE')}</Typography>
+      <GeneralSettingsEdit general={general} onChange={setGeneral} />
       <QuestionSettingsEdit
         question={question}
         onChange={(newSetting: QuestionSettings) => {
@@ -88,7 +102,6 @@ const SettingsView: FC = () => {
           {t('SETTINGS.SAVE_BTN')}
         </Button>
       </Box>
-      {/* <GeneralSettings /> */}
     </Stack>
   );
 };

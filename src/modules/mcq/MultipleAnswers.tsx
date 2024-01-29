@@ -17,9 +17,8 @@ const MultipleAnswers: FC<{
   answersSettings: AnswersSettings;
 }> = ({ userAnswer, answersSettings }) => {
   const { answers } = answersSettings;
-  const { selectAnswer } = useUserAnswers();
+  const { selectAnswer, deleteAnswer } = useUserAnswers();
 
-  // TODO: setup default answer
   const [selectedKeys, setSelectedKeys] = useState<AnswerKey[]>([]);
 
   useEffect(() => {
@@ -40,9 +39,14 @@ const MultipleAnswers: FC<{
         multipleKey: [...selectedKeys, key],
       });
     } else if (!checked) {
-      selectAnswer({
-        multipleKey: selectedKeys.filter((k) => k !== key),
-      });
+      const newAnswer = selectedKeys.filter((k) => k !== key);
+      if (newAnswer.length > 0) {
+        selectAnswer({
+          multipleKey: newAnswer,
+        });
+      } else {
+        deleteAnswer();
+      }
     }
   };
 
