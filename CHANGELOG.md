@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.2...v1.0.3) (2024-01-29)
+
+
+### Bug Fixes
+
+* answer not being shown in single choice ([#52](https://github.com/graasp/graasp-app-multiple-choice-question/issues/52)) ([c4d5c4e](https://github.com/graasp/graasp-app-multiple-choice-question/commit/c4d5c4e7a129ab3c528107b733b06b42b972629c)), closes [#51](https://github.com/graasp/graasp-app-multiple-choice-question/issues/51)
+
 ## [1.0.2](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.1...v1.0.2) (2024-01-24)
 
 
