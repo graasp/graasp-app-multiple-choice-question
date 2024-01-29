@@ -87,8 +87,6 @@ const SettingsView: FC = () => {
         answers={answers}
         onChange={(newSetting: AnswersSettings) => {
           setAnswers({ ...newSetting });
-          // eslint-disable-next-line no-console
-          console.log('Change the answers setting: ', newSetting);
         }}
       />
       <Box>
