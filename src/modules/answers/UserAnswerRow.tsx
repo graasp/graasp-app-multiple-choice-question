@@ -27,7 +27,7 @@ const UserAnswerRow: FC<{
   });
   const { answers } = useSettings();
   const { multipleAnswers } = answers;
-  const { singleKey, multipleKey, status } = userAnswerAppData.data; //
+  const { singleKey, multipleKey, status } = userAnswerAppData.data;
 
   const getLabels = (): JSX.Element => {
     if (multipleAnswers) {
