@@ -2583,15 +2583,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graasp/sdk@npm:3.5.0":
-  version: 3.5.0
-  resolution: "@graasp/sdk@npm:3.5.0"
+"@graasp/sdk@npm:3.6.0":
+  version: 3.6.0
+  resolution: "@graasp/sdk@npm:3.6.0"
   dependencies:
-    date-fns: "npm:3.2.0"
     js-cookie: "npm:3.0.5"
-    uuid: "npm:9.0.1"
     validator: "npm:13.11.0"
-  checksum: dfbb9977904336214e411c93a33084fca8e07cb73145f655a070dfdb81a772d6a0412849ee07c8ee2e74497d59f960a8ef1989062a4e41d78ad5d22b24e8a8db
+  peerDependencies:
+    date-fns: ^3
+    uuid: ^9
+  checksum: df52e11764c727e17ce69d247805fd8a2d49ba291b84e00ca390f853f0b0eb7fc4a2153e7003044cb8f84edf9c2c9cae91b79a55d1e71e71c69317e40145ad12
   languageName: node
   linkType: hard
 
@@ -5287,13 +5288,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:3.2.0":
-  version: 3.2.0
-  resolution: "date-fns@npm:3.2.0"
-  checksum: 2f36cb9165a066ae90c0b6f0c25b3c70eb75bc52e64ba6dd8680964ebda144851a244ff4ed0b2afb4a6bab796a1af6a0e6c7c2814529d04c72fa434f931d4e81
-  languageName: node
-  linkType: hard
-
 "dayjs@npm:1.11.10, dayjs@npm:^1.10.4":
   version: 1.11.10
   resolution: "dayjs@npm:1.11.10"
@@ -6991,7 +6985,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.0"
     "@fontsource/roboto": "npm:^5.0.8"
     "@graasp/apps-query-client": "npm:3.4.1"
-    "@graasp/sdk": "npm:3.5.0"
+    "@graasp/sdk": "npm:3.6.0"
     "@mui/icons-material": "npm:5.15.6"
     "@mui/lab": "npm:5.0.0-alpha.162"
     "@mui/material": "npm:5.15.6"
