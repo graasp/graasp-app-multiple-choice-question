@@ -19,11 +19,13 @@
         "MEMBER_HEAD": "Member",
         "KEY_HEAD": "Key",
         "LABEL_HEAD": "Answer",
+        "STATUS_HEAD": "Status",
         "ROW": {
           "KEY_ERASED_WARNING": {
             "STRING_1": "The key ",
             "STRING_2": " does not exist."
-          }
+          },
+          "NO_STATUS": "No status"
         }
       }
     },

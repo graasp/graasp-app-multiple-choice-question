@@ -1,8 +1,6 @@
 import { FC, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import BackupIcon from '@mui/icons-material/Backup';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ReplayIcon from '@mui/icons-material/Replay';
 import SendIcon from '@mui/icons-material/Send';
 import WarningIcon from '@mui/icons-material/WarningRounded';
@@ -17,6 +15,8 @@ import Typography from '@mui/material/Typography';
 import { MCQ_QUESTION_CY } from '@/config/selectors';
 import { UserAnswerStatus } from '@/interfaces/userAnswer';
 
+import SavedChip from '../common/SavedChip';
+import SubmittedChip from '../common/SubmittedChip';
 import { useSettings } from '../context/SettingsContext';
 import useUserAnswer from '../context/UserAnswersContext';
 import MultipleAnswers from './MultipleAnswers';
@@ -74,25 +74,8 @@ const MCQView: FC = () => {
         </Stack>
       </Box>
       <Stack direction="column" spacing={1} alignItems="center">
-        {userAnswer?.status === UserAnswerStatus.Submitted && (
-          <Tooltip title={t('SUBMIT_OK_TOOLTIP')}>
-            <Chip
-              color="info"
-              icon={<CheckCircleOutlineIcon />}
-              label={t('SUBMIT_OK_HELPER')}
-              variant="outlined"
-            />
-          </Tooltip>
-        )}
-        {userAnswer?.status === UserAnswerStatus.Saved && (
-          <Tooltip title={t('SAVED_TOOLTIP')}>
-            <Chip
-              icon={<BackupIcon />}
-              label={t('SAVED_HELPER')}
-              variant="outlined"
-            />
-          </Tooltip>
-        )}
+        {userAnswer?.status === UserAnswerStatus.Submitted && <SubmittedChip />}
+        {userAnswer?.status === UserAnswerStatus.Saved && <SavedChip />}
         {typeof userAnswer === 'undefined' && required && (
           <Tooltip title={t('REQUIRED_TOOLTIP')}>
             <Chip
