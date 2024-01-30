@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.3...v1.1.0) (2024-01-30)
+
+
+### Features
+
+* display answer status in table ([#57](https://github.com/graasp/graasp-app-multiple-choice-question/issues/57)) ([9fbadca](https://github.com/graasp/graasp-app-multiple-choice-question/commit/9fbadca4a21cecdd8235d7110965658d7ffc6cb8))
+* show status in table ([9fbadca](https://github.com/graasp/graasp-app-multiple-choice-question/commit/9fbadca4a21cecdd8235d7110965658d7ffc6cb8))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/sdk to v3.6.0 ([#44](https://github.com/graasp/graasp-app-multiple-choice-question/issues/44)) ([20bb743](https://github.com/graasp/graasp-app-multiple-choice-question/commit/20bb74383da78501823cac1b17a3d1f7b534f418))
+* **deps:** update dependency @sentry/react to v7.98.0 ([#47](https://github.com/graasp/graasp-app-multiple-choice-question/issues/47)) ([d81e700](https://github.com/graasp/graasp-app-multiple-choice-question/commit/d81e700517fa7b59b5d0bc0989bccde7558aa505))
+* **deps:** update dependency @types/node to v20.11.10 ([#45](https://github.com/graasp/graasp-app-multiple-choice-question/issues/45)) ([284ed3a](https://github.com/graasp/graasp-app-multiple-choice-question/commit/284ed3ad3a324cad05b637843215103db5f344ba))
+* **deps:** update dependency i18next to v23.7.20 ([#41](https://github.com/graasp/graasp-app-multiple-choice-question/issues/41)) ([efa209c](https://github.com/graasp/graasp-app-multiple-choice-question/commit/efa209c5cc8d74f03ffa77cd7fcc620dcafd0edf))
+* **deps:** update dependency i18next to v23.8.1 ([#60](https://github.com/graasp/graasp-app-multiple-choice-question/issues/60)) ([7e1ee69](https://github.com/graasp/graasp-app-multiple-choice-question/commit/7e1ee69c1ec5ee7c4397b720d05a4d11571645c6))
+
 ## [1.0.3](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.2...v1.0.3) (2024-01-29)
 
 
