@@ -27,6 +27,7 @@ const AnswersView: FC = () => {
               <TableCell>{t('TABLE.MEMBER_HEAD')}</TableCell>
               <TableCell>{t('TABLE.KEY_HEAD')}</TableCell>
               <TableCell>{t('TABLE.LABEL_HEAD')}</TableCell>
+              <TableCell>{t('TABLE.STATUS_HEAD')}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
