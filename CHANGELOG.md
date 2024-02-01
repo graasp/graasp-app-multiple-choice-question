@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.1](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.0...v1.1.1) (2024-02-01)
+
+
+### Bug Fixes
+
+* **actions:** change VITE_API_HOST -&gt; API_HOST ([f191ee5](https://github.com/graasp/graasp-app-multiple-choice-question/commit/f191ee557e0229c05d563aa433d98e8507c73e25))
+* **deps:** update dependency @sentry/react to v7.99.0 ([#62](https://github.com/graasp/graasp-app-multiple-choice-question/issues/62)) ([529c18a](https://github.com/graasp/graasp-app-multiple-choice-question/commit/529c18a0d517d35bbe55c0f4c617d7da406119f2))
+* **deps:** update dependency @types/node to v20.11.15 ([#63](https://github.com/graasp/graasp-app-multiple-choice-question/issues/63)) ([daefd71](https://github.com/graasp/graasp-app-multiple-choice-question/commit/daefd718802fd420e82ca2a6b3c10e34ef1b4c18))
+* **deps:** update dependency @types/react to v18.2.51 ([#67](https://github.com/graasp/graasp-app-multiple-choice-question/issues/67)) ([7f0e02a](https://github.com/graasp/graasp-app-multiple-choice-question/commit/7f0e02af5ca6696c0188349d487a76450a0dee36))
+* **deps:** update dependency i18next to v23.8.2 ([#68](https://github.com/graasp/graasp-app-multiple-choice-question/issues/68)) ([c09c39a](https://github.com/graasp/graasp-app-multiple-choice-question/commit/c09c39a325d69082a112032dd127a9540c081daa))
+* **renovate:** extend renovate app config file ([f191ee5](https://github.com/graasp/graasp-app-multiple-choice-question/commit/f191ee557e0229c05d563aa433d98e8507c73e25))
+
 ## [1.1.0](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.0.3...v1.1.0) (2024-01-30)
 
 
