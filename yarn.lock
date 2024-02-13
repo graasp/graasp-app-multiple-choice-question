@@ -3574,12 +3574,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.15":
-  version: 20.11.15
-  resolution: "@types/node@npm:20.11.15"
+"@types/node@npm:20.11.17":
+  version: 20.11.17
+  resolution: "@types/node@npm:20.11.17"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/ec670ab67382b3a45511de0ff1a57640eb51e62dd2f2c3b4484ee35caef18c1d346bba64bd58189e9445cecbfcf9b458ca7850635eb56df2c49472dac656029f
+  checksum: 10/3342df87258d1c56154bcd4b85180f48675427b235971e6e6e2e037353f5a2ae9aaa05ba5df0fe1e2d2f1022c8d856fd39056b9d7f50ea30c0ca3214137cae1d
   languageName: node
   linkType: hard
 
@@ -6995,7 +6995,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
     "@types/i18n": "npm:0.13.10"
     "@types/lodash.isequal": "npm:^4.5.8"
-    "@types/node": "npm:20.11.15"
+    "@types/node": "npm:20.11.17"
     "@types/react": "npm:18.2.51"
     "@types/react-dom": "npm:18.2.18"
     "@types/uuid": "npm:9.0.8"
@@ -7018,7 +7018,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:4.6.0"
     husky: "npm:8.0.3"
-    i18next: "npm:23.8.2"
+    i18next: "npm:23.8.1"
     lodash.isequal: "npm:^4.5.0"
     miragejs: "npm:^0.1.48"
     nock: "npm:^13.5.0"
@@ -7301,12 +7301,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:23.8.2":
-  version: 23.8.2
-  resolution: "i18next@npm:23.8.2"
+"i18next@npm:23.8.1":
+  version: 23.8.1
+  resolution: "i18next@npm:23.8.1"
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
-  checksum: 10/594c4d5bafd9ac0073a5f2c0ccb40b157571857d43f7f22949a5ab6ea07e6e6f7e39058ddee6e7396369b54d5d741e76cba59c0d5c23ce0ab99e06b249c66f5e
+  checksum: 10/e785c4ca982ba5c11c820636e5a677f3ccae0fb7ad283c475e860c85d93371bd2076f02898d4d01dae43dab9a6768bece412c0b92a9fff27d7827bed4b99c9a5
   languageName: node
   linkType: hard
 
