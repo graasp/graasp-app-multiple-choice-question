@@ -11,4 +11,5 @@ export type AnswersSettings = {
 
 export type GeneralSettings = {
   required: boolean;
+  autosubmit: boolean;
 };

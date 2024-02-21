@@ -19,6 +19,8 @@ import {
 import { hooks, mutations } from '@/config/queryClient';
 import { UserAnswer, UserAnswerStatus } from '@/interfaces/userAnswer';
 
+import { useSettings } from './SettingsContext';
+
 type UserAnswersContextType = {
   userAnswer?: UserAnswer;
   selectAnswer: (userAnswer: UserAnswer) => void;
@@ -49,15 +51,15 @@ export const UserAnswersProvider: FC<{
   const { mutate: postAppData } = mutations.usePostAppData();
   const { mutate: patchAppData } = mutations.usePatchAppData();
   const { mutate: deleteAppData } = mutations.useDeleteAppData();
-  const { permission } = useLocalContext();
+  const { permission, memberId } = useLocalContext();
+
+  const { general } = useSettings();
+  const { autosubmit } = general;
 
   const isAdmin = useMemo(
     () => PermissionLevelCompare.gte(permission, PermissionLevel.Admin),
     [permission],
   );
-
-  const { memberId } = useLocalContext();
-
   useEffect(() => {
     if (isSuccess) {
       const allAns = data.filter(
@@ -76,7 +78,9 @@ export const UserAnswersProvider: FC<{
         }
         const payloadData = {
           ...userAnswer,
-          status: UserAnswerStatus.Saved,
+          status: autosubmit
+            ? UserAnswerStatus.Submitted
+            : UserAnswerStatus.Saved,
         };
         if (userAnswerAppData?.id) {
           patchAppData({
@@ -87,7 +91,7 @@ export const UserAnswersProvider: FC<{
           postAppData(getDefaultUserAnswerAppData(payloadData));
         }
       },
-    [patchAppData, postAppData, userAnswerAppData],
+    [autosubmit, patchAppData, postAppData, userAnswerAppData],
   );
 
   const submitAnswer = useMemo(

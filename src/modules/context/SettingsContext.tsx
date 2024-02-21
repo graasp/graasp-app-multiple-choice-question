@@ -28,6 +28,7 @@ const defaultSettingsValues: AllSettingsType = {
   },
   general: {
     required: false,
+    autosubmit: true,
   },
 };
 
