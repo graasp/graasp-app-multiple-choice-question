@@ -1856,9 +1856,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/code-coverage@npm:3.12.22":
-  version: 3.12.22
-  resolution: "@cypress/code-coverage@npm:3.12.22"
+"@cypress/code-coverage@npm:3.12.24":
+  version: 3.12.24
+  resolution: "@cypress/code-coverage@npm:3.12.24"
   dependencies:
     "@cypress/webpack-preprocessor": "npm:^6.0.0"
     chalk: "npm:4.1.2"
@@ -1875,7 +1875,7 @@ __metadata:
     babel-loader: ^8.3 || ^9
     cypress: "*"
     webpack: ^4 || ^5
-  checksum: 10/f6465a4bc461a386c5d72d6455e8c087e4a750aae2ec2ede0cf8218ff121256a6e61e9dcf2f10d7eba0f1968de12110f57ca116fbe51d063b83fad6445defb32
+  checksum: 10/e5b52ee8056810c8c4f98388c7abcd71bde6b0a028e7c17091ed8fabd5088e47b1bf70a3575160b42387f2dd9ba797488860b507c2c21acee8dc143e81b3f1a3
   languageName: node
   linkType: hard
 
@@ -4275,7 +4275,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"buffer@npm:^5.5.0, buffer@npm:^5.6.0":
+"buffer@npm:^5.5.0, buffer@npm:^5.7.1":
   version: 5.7.1
   resolution: "buffer@npm:5.7.1"
   dependencies:
@@ -4799,9 +4799,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.6.4":
-  version: 13.6.4
-  resolution: "cypress@npm:13.6.4"
+"cypress@npm:13.6.5":
+  version: 13.6.5
+  resolution: "cypress@npm:13.6.5"
   dependencies:
     "@cypress/request": "npm:^3.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -4810,7 +4810,7 @@ __metadata:
     arch: "npm:^2.2.0"
     blob-util: "npm:^2.0.2"
     bluebird: "npm:^3.7.2"
-    buffer: "npm:^5.6.0"
+    buffer: "npm:^5.7.1"
     cachedir: "npm:^2.3.0"
     chalk: "npm:^4.1.0"
     check-more-types: "npm:^2.24.0"
@@ -4828,7 +4828,7 @@ __metadata:
     figures: "npm:^3.2.0"
     fs-extra: "npm:^9.1.0"
     getos: "npm:^3.2.1"
-    is-ci: "npm:^3.0.0"
+    is-ci: "npm:^3.0.1"
     is-installed-globally: "npm:~0.4.0"
     lazy-ass: "npm:^1.6.0"
     listr2: "npm:^3.8.3"
@@ -4847,7 +4847,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/acdc246cf41bf77b95ab78a26ae7cb000c64abfd768ad7cef54830e1fa8d7e89cee64a56d00a9a389ac36ff6ec8bd704d6fa1d5d92123123c8d96ebae6328b8b
+  checksum: 10/df11ec229eaab173dd513b7ee59202407450aaf2900798fe09e076636ffae6a86fea8265c608756f1c44f1b0db6096115e2d7007a48bf196c192462c13e9f339
   languageName: node
   linkType: hard
 
@@ -6463,7 +6463,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:18.6.1"
     "@commitlint/config-conventional": "npm:18.6.2"
-    "@cypress/code-coverage": "npm:3.12.22"
+    "@cypress/code-coverage": "npm:3.12.24"
     "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@fontsource/roboto": "npm:^5.0.8"
@@ -6486,7 +6486,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:6.20.0"
     "@vitejs/plugin-react": "npm:^4.2.1"
     concurrently: "npm:8.2.2"
-    cypress: "npm:13.6.4"
+    cypress: "npm:13.6.5"
     env-cmd: "npm:10.1.0"
     eslint: "npm:8.56.0"
     eslint-config-airbnb: "npm:19.0.4"
@@ -6500,7 +6500,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.1.3"
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:4.6.0"
-    husky: "npm:9.0.10"
+    husky: "npm:9.0.11"
     i18next: "npm:23.8.2"
     lodash.isequal: "npm:^4.5.0"
     miragejs: "npm:^0.1.48"
@@ -6726,12 +6726,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:9.0.10":
-  version: 9.0.10
-  resolution: "husky@npm:9.0.10"
+"husky@npm:9.0.11":
+  version: 9.0.11
+  resolution: "husky@npm:9.0.11"
   bin:
     husky: bin.mjs
-  checksum: 10/c303f1862e2b63873605df55a2b08303155e35c799585d7dd677628f62d716e7304bd984fc7d00ec44e740caac07d51720d1a0abb0a23a70a38859d89eb8e72d
+  checksum: 10/8a9b7cb9dc8494b470b3b47b386e65d579608c6206da80d3cc8b71d10e37947264af3dfe00092368dad9673b51d2a5ee87afb4b2291e77ba9e7ec1ac36e56cd1
   languageName: node
   linkType: hard
 
@@ -6953,7 +6953,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0":
+"is-ci@npm:^3.0.1":
   version: 3.0.1
   resolution: "is-ci@npm:3.0.1"
   dependencies:
@@ -8190,13 +8190,13 @@ __metadata:
   linkType: hard
 
 "nock@npm:^13.5.0":
-  version: 13.5.1
-  resolution: "nock@npm:13.5.1"
+  version: 13.5.3
+  resolution: "nock@npm:13.5.3"
   dependencies:
     debug: "npm:^4.1.0"
     json-stringify-safe: "npm:^5.0.1"
     propagate: "npm:^2.0.0"
-  checksum: 10/92d57f8bb452af8c07e0a0813dd39c8b315718b60a075aceca5db241904b0d40867d2c6cd548ca6db880d014ed069920499a55497973a35df70e45e5c98f442a
+  checksum: 10/a5766a71e5a561e0cb96941748480decd17c4c07413b17b79fa2ac544964182fdb649f28f5c4fc4d4ce7a19be6ea67052c864319579991cc4130238d447052b3
   languageName: node
   linkType: hard
 
@@ -10511,8 +10511,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:^5.0.12":
-  version: 5.1.1
-  resolution: "vite@npm:5.1.1"
+  version: 5.1.4
+  resolution: "vite@npm:5.1.4"
   dependencies:
     esbuild: "npm:^0.19.3"
     fsevents: "npm:~2.3.3"
@@ -10546,7 +10546,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10/bdb8e683caddaa0a9adcbf40144ca8ea3660836b208862b07d43787ea867845919af16e58745365bd13ed3b7f66bbf9788a6869ee22cfaacac01645b59729c34
+  checksum: 10/e9003b853f0784260f4fe7ce0190124b347fd8fd6bf889a07080facd0d9a9667eaff4022eddb1ba3f0283ef69d15d77f84bca832082e48874a7a62e7f6d66b08
   languageName: node
   linkType: hard
 
