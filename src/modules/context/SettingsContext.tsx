@@ -1,5 +1,7 @@
 import { FC, ReactElement, createContext, useContext } from 'react';
 
+import { AppSetting } from '@graasp/sdk';
+
 import {
   AnswersSettings,
   GeneralSettings,
@@ -76,7 +78,9 @@ export const SettingsProvider: FC<Prop> = ({ children }) => {
     newValue: AllSettingsDataType,
   ): void => {
     if (appSettingsList) {
-      const previousSetting = appSettingsList.find((s) => s.name === name);
+      const previousSetting = appSettingsList.find(
+        (s: AppSetting) => s.name === name,
+      );
       // setting does not exist
       if (!previousSetting) {
         postAppSetting({
@@ -100,7 +104,9 @@ export const SettingsProvider: FC<Prop> = ({ children }) => {
     if (isSuccess) {
       const allSettings: AllSettingsType = ALL_SETTING_NAMES.reduce(
         <T extends AllSettingsNameType>(acc: AllSettingsType, key: T) => {
-          const setting = appSettingsList.find((s) => s.name === key);
+          const setting = appSettingsList.find(
+            (s: AppSetting) => s.name === key,
+          );
           if (setting) {
             const settingData =
               setting?.data as unknown as AllSettingsType[typeof key];
