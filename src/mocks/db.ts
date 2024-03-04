@@ -44,6 +44,7 @@ export const mockItem: DiscriminatedItem = {
   path: '',
   settings: {},
   type: ItemType.APP,
+  lang: 'en',
   extra: { [ItemType.APP]: { url: 'http://localhost:3002' } },
   creator: mockMembers[0],
   createdAt: new Date().toISOString(),
