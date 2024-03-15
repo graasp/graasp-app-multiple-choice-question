@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.8](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.7...v1.1.8) (2024-03-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/sdk to v4.2.0 ([#139](https://github.com/graasp/graasp-app-multiple-choice-question/issues/139)) ([8c8bb69](https://github.com/graasp/graasp-app-multiple-choice-question/commit/8c8bb69574b12cdd752cd6637b7803c2463cbd84))
+* **deps:** update dependency @sentry/react to v7.107.0 ([#141](https://github.com/graasp/graasp-app-multiple-choice-question/issues/141)) ([e24de1d](https://github.com/graasp/graasp-app-multiple-choice-question/commit/e24de1d1c5aa0548537ee5a6e0fc13286875375b))
+* **deps:** update dependency @types/node to v20.11.27 ([#136](https://github.com/graasp/graasp-app-multiple-choice-question/issues/136)) ([ae32f98](https://github.com/graasp/graasp-app-multiple-choice-question/commit/ae32f984eab7acd257edb5fe4fdb2dc990f4c843))
+* **deps:** update dependency @types/node to v20.11.28 ([#144](https://github.com/graasp/graasp-app-multiple-choice-question/issues/144)) ([1f1524f](https://github.com/graasp/graasp-app-multiple-choice-question/commit/1f1524f4df824eaea2b8272b555e7c214a8b4412))
+* **deps:** update dependency @types/react to v18.2.66 ([#142](https://github.com/graasp/graasp-app-multiple-choice-question/issues/142)) ([e2c4c8e](https://github.com/graasp/graasp-app-multiple-choice-question/commit/e2c4c8ea1eb27d96c69a01eafbac0d70623964ac))
+* **deps:** update dependency @types/react-dom to v18.2.22 ([#135](https://github.com/graasp/graasp-app-multiple-choice-question/issues/135)) ([7ada2dc](https://github.com/graasp/graasp-app-multiple-choice-question/commit/7ada2dc7e5c0cfed00b8c45262e384fdf2746a6e))
+* **deps:** update dependency react-toastify to v10.0.5 ([#145](https://github.com/graasp/graasp-app-multiple-choice-question/issues/145)) ([79174d4](https://github.com/graasp/graasp-app-multiple-choice-question/commit/79174d4e1e59694b1824e29357287a7d24df0de1))
+* **deps:** update mui (non-major) ([#137](https://github.com/graasp/graasp-app-multiple-choice-question/issues/137)) ([8d07987](https://github.com/graasp/graasp-app-multiple-choice-question/commit/8d079874c59e113a671bd821158c618b536bb11a))
+
 ## [1.1.7](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.6...v1.1.7) (2024-03-13)
 
 
