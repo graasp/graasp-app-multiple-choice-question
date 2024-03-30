@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.1.9](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.8...v1.1.9) (2024-03-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @emotion/styled to v11.11.5 ([#175](https://github.com/graasp/graasp-app-multiple-choice-question/issues/175)) ([4c35646](https://github.com/graasp/graasp-app-multiple-choice-question/commit/4c3564650e0a5c5a8b64651a4ce9ae43ee185c44))
+* **deps:** update dependency @graasp/apps-query-client to v3.4.9 ([#164](https://github.com/graasp/graasp-app-multiple-choice-question/issues/164)) ([a2559fa](https://github.com/graasp/graasp-app-multiple-choice-question/commit/a2559fa6f1e6912bef9d93a2f18c0a389ca27c59))
+* **deps:** update dependency @graasp/sdk to v4.2.1 ([#148](https://github.com/graasp/graasp-app-multiple-choice-question/issues/148)) ([34febde](https://github.com/graasp/graasp-app-multiple-choice-question/commit/34febde7000eeaac729314d1fc014061716e8487))
+* **deps:** update dependency @graasp/sdk to v4.3.1 ([#166](https://github.com/graasp/graasp-app-multiple-choice-question/issues/166)) ([4c784ae](https://github.com/graasp/graasp-app-multiple-choice-question/commit/4c784aef305987ab797ee03d385a272b6b8618dd))
+* **deps:** update dependency @graasp/sdk to v4.4.0 ([#171](https://github.com/graasp/graasp-app-multiple-choice-question/issues/171)) ([9fa6888](https://github.com/graasp/graasp-app-multiple-choice-question/commit/9fa68881d979c67667fbeca79aea48d871d2f0bc))
+* **deps:** update dependency @sentry/react to v7.108.0 ([#161](https://github.com/graasp/graasp-app-multiple-choice-question/issues/161)) ([1979056](https://github.com/graasp/graasp-app-multiple-choice-question/commit/1979056904dcf3742c891c0fd31716df86bea576))
+* **deps:** update dependency @sentry/react to v7.109.0 ([#173](https://github.com/graasp/graasp-app-multiple-choice-question/issues/173)) ([f365bfb](https://github.com/graasp/graasp-app-multiple-choice-question/commit/f365bfb81111848a7aefc83cd878f4ad49f9fb56))
+* **deps:** update dependency @types/node to v20.11.30 ([#153](https://github.com/graasp/graasp-app-multiple-choice-question/issues/153)) ([33f77a7](https://github.com/graasp/graasp-app-multiple-choice-question/commit/33f77a75369802a82ad726f0736bbeef804591f7))
+* **deps:** update dependency @types/node to v20.12.2 ([#176](https://github.com/graasp/graasp-app-multiple-choice-question/issues/176)) ([3c9a6fd](https://github.com/graasp/graasp-app-multiple-choice-question/commit/3c9a6fd76fe4ea6f33dd79dbcd05d7d5b21739cd))
+* **deps:** update dependency @types/react to v18.2.67 ([#150](https://github.com/graasp/graasp-app-multiple-choice-question/issues/150)) ([4c6d412](https://github.com/graasp/graasp-app-multiple-choice-question/commit/4c6d412d0246f380d7c18415fa0764628e3965d4))
+* **deps:** update dependency @types/react to v18.2.69 ([#162](https://github.com/graasp/graasp-app-multiple-choice-question/issues/162)) ([afd0296](https://github.com/graasp/graasp-app-multiple-choice-question/commit/afd029658b84fc3fd157c7dbfd890ca1e65dbc80))
+* **deps:** update dependency @types/react to v18.2.70 ([#165](https://github.com/graasp/graasp-app-multiple-choice-question/issues/165)) ([1359f3b](https://github.com/graasp/graasp-app-multiple-choice-question/commit/1359f3be551e1bf78c8065ba00cc7458a9ffe9b1))
+* **deps:** update dependency @types/react to v18.2.72 ([#169](https://github.com/graasp/graasp-app-multiple-choice-question/issues/169)) ([8096974](https://github.com/graasp/graasp-app-multiple-choice-question/commit/80969742eac89f4488dd936da9a2d7a263b96359))
+* **deps:** update dependency @types/react to v18.2.73 ([#170](https://github.com/graasp/graasp-app-multiple-choice-question/issues/170)) ([92c7daf](https://github.com/graasp/graasp-app-multiple-choice-question/commit/92c7dafc62100992d4e6b716f67e41a21f38ce50))
+* **deps:** update dependency @types/react-dom to v18.2.23 ([#172](https://github.com/graasp/graasp-app-multiple-choice-question/issues/172)) ([5db6fa1](https://github.com/graasp/graasp-app-multiple-choice-question/commit/5db6fa185aad7563b2fc8fa3c2f216043eb939b1))
+* **deps:** update dependency typescript to v5.4.3 ([#158](https://github.com/graasp/graasp-app-multiple-choice-question/issues/158)) ([ced5553](https://github.com/graasp/graasp-app-multiple-choice-question/commit/ced555394d9420788f5a41425f40cbd94dbe2e85))
+* **deps:** update mui (non-major) ([#155](https://github.com/graasp/graasp-app-multiple-choice-question/issues/155)) ([970825b](https://github.com/graasp/graasp-app-multiple-choice-question/commit/970825bacec611c257c51638623b9d495324f86c))
+
 ## [1.1.8](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.7...v1.1.8) (2024-03-15)
 
 
