@@ -10,7 +10,8 @@ import Chip from '@mui/material/Chip';
 import Collapse from '@mui/material/Collapse';
 import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
-import Typography from '@mui/material/Typography';
+
+import { QuestionLabel } from '@graasp/ui/apps';
 
 import { MCQ_QUESTION_CY } from '@/config/selectors';
 import { UserAnswerStatus } from '@/interfaces/userAnswer';
@@ -39,10 +40,12 @@ const MCQView: FC = () => {
   return (
     <Stack spacing={1} justifyContent="space-between" direction="row">
       <Box>
-        <Typography data-cy={MCQ_QUESTION_CY} sx={{ mb: 1 }} variant="h6">
-          {question.label}
-          {required && <sup>*</sup>}
-        </Typography>
+        <QuestionLabel dataCy={MCQ_QUESTION_CY}>
+          <>
+            {question.label}
+            {required && <sup>*</sup>}
+          </>
+        </QuestionLabel>
         {multipleAnswers ? (
           <MultipleAnswers userAnswer={userAnswer} answersSettings={answers} />
         ) : (
