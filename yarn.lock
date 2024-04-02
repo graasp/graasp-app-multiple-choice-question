@@ -1854,9 +1854,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/code-coverage@npm:3.12.32":
-  version: 3.12.32
-  resolution: "@cypress/code-coverage@npm:3.12.32"
+"@cypress/code-coverage@npm:3.12.33":
+  version: 3.12.33
+  resolution: "@cypress/code-coverage@npm:3.12.33"
   dependencies:
     "@cypress/webpack-preprocessor": "npm:^6.0.0"
     chalk: "npm:4.1.2"
@@ -1873,7 +1873,7 @@ __metadata:
     babel-loader: ^8.3 || ^9
     cypress: "*"
     webpack: ^4 || ^5
-  checksum: 10/fc67b523c7341bd6b970e2007af8e82024ae00240aaa45d49116a300e0d578942cec5b140e40f6b91db93862cdc92fc829fc96396d9b852c2dc6082dd067daad
+  checksum: 10/4502b4dc7c406a13524b4a551b0fe9494df307e6fd4ca4cf0ad59d9268f1591a5f4c0a8b1557e6a5e31bb1319dc85a19e1c9077208729dc89654c9f5da0666ce
   languageName: node
   linkType: hard
 
@@ -4784,9 +4784,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:13.7.1":
-  version: 13.7.1
-  resolution: "cypress@npm:13.7.1"
+"cypress@npm:13.7.2":
+  version: 13.7.2
+  resolution: "cypress@npm:13.7.2"
   dependencies:
     "@cypress/request": "npm:^3.0.0"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -4832,7 +4832,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/897abf011156af85fae617b20177ed945fb76c78ac9bfad10af870e62181f9d56fdc886e00602e576cfbc79cc97230dc20c7bd5b4b87a4ada7ed83025fb147d3
+  checksum: 10/072c93c8f10b520ff29d7ec49c42a9ccfa3f3dd579d3429e508fda67ee29ff1013091bdab81f779961910a04fe7e33e1b61ea4e9f24f56b43ca08b056609dfcb
   languageName: node
   linkType: hard
 
@@ -6506,7 +6506,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:19.2.1"
     "@commitlint/config-conventional": "npm:19.1.0"
-    "@cypress/code-coverage": "npm:3.12.32"
+    "@cypress/code-coverage": "npm:3.12.33"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@fontsource/roboto": "npm:^5.0.8"
@@ -6529,7 +6529,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:7.4.0"
     "@vitejs/plugin-react": "npm:^4.2.1"
     concurrently: "npm:8.2.2"
-    cypress: "npm:13.7.1"
+    cypress: "npm:13.7.2"
     env-cmd: "npm:10.1.0"
     eslint: "npm:8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
