@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.10](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.9...v1.1.10) (2024-04-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/apps-query-client to v3.4.10 ([#184](https://github.com/graasp/graasp-app-multiple-choice-question/issues/184)) ([ae5b1e1](https://github.com/graasp/graasp-app-multiple-choice-question/commit/ae5b1e161e9144466969146592a28f5f5967e224))
+* **deps:** update dependency @types/node to v20.12.3 ([#182](https://github.com/graasp/graasp-app-multiple-choice-question/issues/182)) ([1038cfb](https://github.com/graasp/graasp-app-multiple-choice-question/commit/1038cfbcd7fd454be4cdf4323030679e15c2b774))
+* **deps:** update dependency @types/react to v18.2.74 ([#181](https://github.com/graasp/graasp-app-multiple-choice-question/issues/181)) ([771d8e0](https://github.com/graasp/graasp-app-multiple-choice-question/commit/771d8e00c649098b14cde937758af0e84b30d235))
+
 ## [1.1.9](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.8...v1.1.9) (2024-03-30)
 
 
