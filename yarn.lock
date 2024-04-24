@@ -1913,9 +1913,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cypress/code-coverage@npm:3.12.35":
-  version: 3.12.35
-  resolution: "@cypress/code-coverage@npm:3.12.35"
+"@cypress/code-coverage@npm:3.12.36":
+  version: 3.12.36
+  resolution: "@cypress/code-coverage@npm:3.12.36"
   dependencies:
     "@cypress/webpack-preprocessor": "npm:^6.0.0"
     chalk: "npm:4.1.2"
@@ -1932,7 +1932,7 @@ __metadata:
     babel-loader: ^8.3 || ^9
     cypress: "*"
     webpack: ^4 || ^5
-  checksum: 10/d481e188248d7639a70d6178f283faf03fa1f87853fce6e7427679ca016408a004f4745269c0432e0b7ad420b255021ad3ed648fd741da22b91e65783bf0c3f6
+  checksum: 10/3dddeab4be5a29c26cbfed7500f80d2bb921b5b8ef6003adf0e1e27d5eaef6a807994d3af4ea6187202742d4e3190f8cd8dc72f4e56757dff3243f82ca6d339b
   languageName: node
   linkType: hard
 
@@ -3897,10 +3897,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/i18n@npm:0.13.11":
-  version: 0.13.11
-  resolution: "@types/i18n@npm:0.13.11"
-  checksum: 10/0331fd495d692f5cfb220e87cc6b2c85afbd064067747add23a000f8e1c1e57471b4bf5a2738a88cb20e26d580505b8abc8874ae6c7aa8b2804c9cd5b05aa5ae
+"@types/i18n@npm:0.13.12":
+  version: 0.13.12
+  resolution: "@types/i18n@npm:0.13.12"
+  checksum: 10/37fafabce4973ac0be008c5401bd159397dbaa2dab720323d1624a0580c1dce3416186981417c7d6558b90dd44947ccdb2ec4da663894ffba57a6239a5d4f4d2
   languageName: node
   linkType: hard
 
@@ -7903,7 +7903,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:19.3.0"
     "@commitlint/config-conventional": "npm:19.2.2"
-    "@cypress/code-coverage": "npm:3.12.35"
+    "@cypress/code-coverage": "npm:3.12.36"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@fontsource/roboto": "npm:^5.0.8"
@@ -7917,7 +7917,7 @@ __metadata:
     "@tanstack/react-query": "npm:^4.36.1"
     "@tanstack/react-query-devtools": "npm:^4.36.1"
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
-    "@types/i18n": "npm:0.13.11"
+    "@types/i18n": "npm:0.13.12"
     "@types/lodash.isequal": "npm:^4.5.8"
     "@types/node": "npm:20.12.7"
     "@types/react": "npm:18.2.79"
