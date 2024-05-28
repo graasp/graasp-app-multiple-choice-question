@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.15](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.14...v1.1.15) (2024-05-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @graasp/ui to v4.18.2 ([#257](https://github.com/graasp/graasp-app-multiple-choice-question/issues/257)) ([a49a16e](https://github.com/graasp/graasp-app-multiple-choice-question/commit/a49a16e517568371b4476979de97a37a71efc5c1))
+* **deps:** update dependency @sentry/react to v7.116.0 ([#245](https://github.com/graasp/graasp-app-multiple-choice-question/issues/245)) ([78c99d1](https://github.com/graasp/graasp-app-multiple-choice-question/commit/78c99d19b4ecd29ae0ee80ca10a2824fd77ad92a))
+* **deps:** update dependency @types/node to v20.12.12 ([#246](https://github.com/graasp/graasp-app-multiple-choice-question/issues/246)) ([8f3c9ee](https://github.com/graasp/graasp-app-multiple-choice-question/commit/8f3c9ee2b6c0060dd73e1e802b0cad76fe34cebd))
+* **deps:** update dependency @types/react to v18.3.3 ([#253](https://github.com/graasp/graasp-app-multiple-choice-question/issues/253)) ([1541dee](https://github.com/graasp/graasp-app-multiple-choice-question/commit/1541deef2e4c0e959e764d86d8f4e786f71f2602))
+* **deps:** update dependency i18next to v23.11.5 ([#250](https://github.com/graasp/graasp-app-multiple-choice-question/issues/250)) ([d67ba00](https://github.com/graasp/graasp-app-multiple-choice-question/commit/d67ba00d34a4a33a6c843f815c8b3d124d93b61d))
+* **deps:** update dependency react-i18next to v14.1.2 ([#254](https://github.com/graasp/graasp-app-multiple-choice-question/issues/254)) ([3b8c048](https://github.com/graasp/graasp-app-multiple-choice-question/commit/3b8c0487873fd443b97a4ae0848f2e1172323a1e))
+* **deps:** update mui (non-major) to v5.15.18 ([#247](https://github.com/graasp/graasp-app-multiple-choice-question/issues/247)) ([b6094a0](https://github.com/graasp/graasp-app-multiple-choice-question/commit/b6094a093fbf938729ae929c3a1815692d5250a5))
+
 ## [1.1.14](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.13...v1.1.14) (2024-05-07)
 
 
