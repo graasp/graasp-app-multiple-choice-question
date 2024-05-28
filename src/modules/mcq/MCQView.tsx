@@ -43,7 +43,7 @@ const MCQView: FC = () => {
         <QuestionLabel dataCy={MCQ_QUESTION_CY}>
           <>
             {question.label}
-            {required && <sup>*</sup>}
+            {required && question.label.length > 0 && <sup>*</sup>}
           </>
         </QuestionLabel>
         {multipleAnswers ? (
