@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.16](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.15...v1.1.16) (2024-05-28)
+
+
+### Bug Fixes
+
+* don't show required star on question if question is empty ([#263](https://github.com/graasp/graasp-app-multiple-choice-question/issues/263)) ([fd1987c](https://github.com/graasp/graasp-app-multiple-choice-question/commit/fd1987c134404d9510cbd1fa583a97e604645a61))
+
 ## [1.1.15](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.14...v1.1.15) (2024-05-24)
 
 
