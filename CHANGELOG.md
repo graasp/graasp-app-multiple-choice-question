@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.19](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.18...v1.1.19) (2024-06-13)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sentry/react to v7.117.0 ([#284](https://github.com/graasp/graasp-app-multiple-choice-question/issues/284)) ([813d782](https://github.com/graasp/graasp-app-multiple-choice-question/commit/813d78271a9ea6179630d694cc9eb68667db5545))
+* **deps:** update dependency @types/node to v20.14.2 ([#278](https://github.com/graasp/graasp-app-multiple-choice-question/issues/278)) ([274e348](https://github.com/graasp/graasp-app-multiple-choice-question/commit/274e348bea761cb6550fd646e28a91b5b20b1ad8))
+* **deps:** update graasp packages ([#282](https://github.com/graasp/graasp-app-multiple-choice-question/issues/282)) ([adf5b02](https://github.com/graasp/graasp-app-multiple-choice-question/commit/adf5b020ebdf2a61512e412af851176730d12b55))
+* **deps:** update mui (non-major) to v5.15.20 ([#285](https://github.com/graasp/graasp-app-multiple-choice-question/issues/285)) ([15aeba8](https://github.com/graasp/graasp-app-multiple-choice-question/commit/15aeba8f883654c9b847ab1047e7c890b6a36ca2))
+
 ## [1.1.18](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.17...v1.1.18) (2024-06-03)
 
 
