@@ -66,7 +66,7 @@ export const UserAnswersProvider: FC<{
         (d: AppData) => d.type === AppDataType.UserAnswer,
       ) as UserAnswerAppData[];
       setAllAnswersAppData(allAns);
-      setUserAnswerAppData(allAns.find((d) => d.member.id === memberId));
+      setUserAnswerAppData(allAns.find((d) => d.account.id === memberId));
     }
   }, [isSuccess, data, memberId]);
 
