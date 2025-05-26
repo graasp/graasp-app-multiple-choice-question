@@ -1,23 +1,21 @@
-import { Member, MemberType } from '@graasp/sdk';
+import { AccountType, CompleteAccount } from '@graasp/sdk';
 
-export const MEMBERS: { [key: string]: Member } = {
+export const MEMBERS: { [key: string]: CompleteAccount & { email: string } } = {
   ANNA: {
     id: '0f0a2774-a965-4b97-afb4-bccc3796e060',
     name: 'anna',
-    type: MemberType.Individual,
+    type: AccountType.Individual,
     email: 'anna@graasp.org',
-    extra: {},
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   },
   BOB: {
     id: '1f0a2774-a965-4b97-afb4-bccc3796e060',
     name: 'bob',
-    type: MemberType.Individual,
+    type: AccountType.Individual,
     email: 'bob@graasp.org',
-    extra: {},
-    createdAt: new Date(),
-    updatedAt: new Date(),
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   },
 };
 
