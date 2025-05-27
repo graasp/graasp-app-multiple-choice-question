@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.21](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.20...v1.1.21) (2025-05-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @types/node to v22 ([#346](https://github.com/graasp/graasp-app-multiple-choice-question/issues/346)) ([ad6bede](https://github.com/graasp/graasp-app-multiple-choice-question/commit/ad6bedefa315956eef8a01cef8a497fff9771242))
+
 ## [1.1.20](https://github.com/graasp/graasp-app-multiple-choice-question/compare/v1.1.19...v1.1.20) (2025-05-26)
 
 
