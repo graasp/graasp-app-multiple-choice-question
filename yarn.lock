@@ -3504,12 +3504,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:22.15.21":
+"@types/node@npm:*":
   version: 22.15.21
   resolution: "@types/node@npm:22.15.21"
   dependencies:
     undici-types: "npm:~6.21.0"
   checksum: 10/cb4189587cca445bfb8166c0ed39f9344d743f37f3da892f2999a99bbabda45dc773237e61ecb7d1dc83dd95718cb1b5715b0be5dd7953565b19019e36a7cf39
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:22.15.35":
+  version: 22.15.35
+  resolution: "@types/node@npm:22.15.35"
+  dependencies:
+    undici-types: "npm:~6.21.0"
+  checksum: 10/68cbfe4bcfc20397956af69d6c01096ded6dadd87c2ae5cfd61e0a43537c09741f125738268787455b87ba831c3fbefbceb1189c09fec1c94fc6276ef7563018
   languageName: node
   linkType: hard
 
@@ -6891,7 +6900,7 @@ __metadata:
     "@trivago/prettier-plugin-sort-imports": "npm:^4.3.0"
     "@types/i18n": "npm:0.13.12"
     "@types/lodash.isequal": "npm:^4.5.8"
-    "@types/node": "npm:22.15.21"
+    "@types/node": "npm:22.15.35"
     "@types/react": "npm:18.3.12"
     "@types/react-dom": "npm:18.3.1"
     "@types/uuid": "npm:10.0.0"
